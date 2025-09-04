@@ -1,0 +1,9 @@
+format: jb-book
+root: intro
+
+chapters:
+  - file: tugas1
+    title: Tugas 1
+  - file: tugas2
+    title: Tugas 2
+
