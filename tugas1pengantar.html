@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Pengantar &#8212; Project PPW</title>
+    <title>Pengantar Web Mining &#8212; Project PPW</title>
   
   
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas1pengantar';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Crawling" href="tugas1crawling.html" />
+    <link rel="next" title="Tugas 1 | Crawling Springer Nature" href="tugas1crawling.html" />
     <link rel="prev" title="Profile" href="tugas1profile.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -179,14 +179,20 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tugas 1</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="tugas1profile.html">Profile</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Pengantar</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas1crawling.html">Crawling</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tugas1.html">Tugas 1</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tugas1profile.html">Profile</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Pengantar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas1crawling.html">Crawling</a></li>
 </ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="tugas2.html">Tugas 2</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas2.html">Tugas 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="tugas2crwpta.html">Crawling jurnal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas2crwberita.html">Crawling Berita</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas2linkkelr.html">Link keluaran</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3.html">Tugas 3</a></li>
 </ul>
 
     </div>
@@ -359,7 +365,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -370,11 +378,30 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Pengantar</h1>
+    <h1>Pengantar Web Mining</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-singkat">Ringkasan Singkat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi">Definisi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-web-mining">Klasifikasi Web Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tantangan">Tantangan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tahapan-web-mining">Tahapan Web Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-umum">Algoritma Umum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi">Aplikasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etika-privasi">Etika &amp; Privasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referensi">Referensi</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -384,10 +411,90 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="pengantar">
-<h1>Pengantar<a class="headerlink" href="#pengantar" title="Link to this heading">#</a></h1>
-<p>Penambangan web adalah penggunaan teknik penambangan data untuk secara otomatis menemukan dan mengekstrak informasi dari layanan web” (Etzioni, 1996; CACM 39).</p>
-<p>Penambangan web bertujuan untuk menemukan pola-pola berguna atau pengetahuan dari struktur hiperlink web, isi halaman web, serta perilaku pengguna.” (Bing Liu, 2007, <em>Web Data Mining</em>).</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="pengantar-web-mining">
+<h1>Pengantar Web Mining<a class="headerlink" href="#pengantar-web-mining" title="Link to this heading">#</a></h1>
+<section id="ringkasan-singkat">
+<h2>Ringkasan Singkat<a class="headerlink" href="#ringkasan-singkat" title="Link to this heading">#</a></h2>
+<p>Web mining adalah proses menemukan informasi dan pola yang berguna dari data web menggunakan teknik data mining, information retrieval (IR), dan natural language processing (NLP). Tujuannya adalah untuk mengekstrak, mengorganisir, dan menganalisis konten, struktur, serta perilaku pengguna. Hasilnya digunakan dalam personalisasi, rekomendasi, analisis pasar, optimasi mesin pencari, hingga deteksi anomali.</p>
+</section>
+<section id="definisi">
+<h2>Definisi<a class="headerlink" href="#definisi" title="Link to this heading">#</a></h2>
+<p>Menurut Etzioni (1996), <em>web mining</em> adalah penggunaan teknik penambangan data untuk secara otomatis menemukan dan mengekstrak informasi dari layanan web. Bing Liu (2007) menambahkan bahwa web mining bertujuan menemukan pola atau pengetahuan berguna dari struktur hyperlink, isi halaman, dan perilaku pengguna.</p>
+</section>
+<section id="klasifikasi-web-mining">
+<h2>Klasifikasi Web Mining<a class="headerlink" href="#klasifikasi-web-mining" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Web Structure Mining</strong>: Analisis struktur hyperlink antar halaman, misalnya dengan graf dan PageRank.</p></li>
+<li><p><strong>Web Content Mining</strong>: Ekstraksi isi web (teks, gambar, multimedia) dengan teknik NLP, clustering, text mining, dan sentiment analysis.</p></li>
+<li><p><strong>Web Usage Mining</strong>: Analisis pola perilaku pengguna dari log server atau clickstream, berguna untuk rekomendasi dan personalisasi.</p></li>
+</ol>
+</section>
+<section id="tantangan">
+<h2>Tantangan<a class="headerlink" href="#tantangan" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Skala data web yang sangat besar.</p></li>
+<li><p>Data heterogen (HTML, XML, JSON, teks, gambar, video).</p></li>
+<li><p>Struktur kompleks dengan DOM dan skrip.</p></li>
+<li><p>Data sangat dinamis dan cepat berubah.</p></li>
+<li><p>Kebisingan (spam, iklan, duplikasi).</p></li>
+<li><p>Batasan etika dan privasi (robots.txt, regulasi, data sensitif).</p></li>
+</ul>
+</section>
+<section id="tahapan-web-mining">
+<h2>Tahapan Web Mining<a class="headerlink" href="#tahapan-web-mining" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Crawling &amp; Data Acquisition.</p></li>
+<li><p>Parsing &amp; Penyimpanan.</p></li>
+<li><p>Preprocessing &amp; Pembersihan.</p></li>
+<li><p>Representasi Fitur (TF–IDF, embeddings, graph features).</p></li>
+<li><p>Analisis dengan algoritma (klasifikasi, clustering, association rule).</p></li>
+<li><p>Evaluasi &amp; Validasi hasil.</p></li>
+<li><p>Deployment (dashboard, rekomendasi, search engine).</p></li>
+</ol>
+</section>
+<section id="algoritma-umum">
+<h2>Algoritma Umum<a class="headerlink" href="#algoritma-umum" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>IR</strong>: indexing, ranking.</p></li>
+<li><p><strong>NLP</strong>: TF–IDF, topic modeling, sentiment analysis.</p></li>
+<li><p><strong>Machine Learning</strong>: Decision Tree, Random Forest, SVM, Neural Network.</p></li>
+<li><p><strong>Clustering</strong>: K-Means, DBSCAN.</p></li>
+<li><p><strong>Graph Analysis</strong>: PageRank, community detection.</p></li>
+<li><p><strong>Association Rule Mining</strong>: Apriori.</p></li>
+</ul>
+</section>
+<section id="aplikasi">
+<h2>Aplikasi<a class="headerlink" href="#aplikasi" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Sistem rekomendasi &amp; personalisasi.</p></li>
+<li><p>Mesin pencari &amp; optimasi hasil pencarian.</p></li>
+<li><p>Analisis sentimen publik.</p></li>
+<li><p>Profiling pelanggan &amp; intelligence bisnis.</p></li>
+<li><p>Deteksi fraud &amp; intrusi.</p></li>
+<li><p>Trend monitoring di media sosial.</p></li>
+</ul>
+</section>
+<section id="etika-privasi">
+<h2>Etika &amp; Privasi<a class="headerlink" href="#etika-privasi" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Mematuhi robots.txt dan kebijakan situs.</p></li>
+<li><p>Menjaga privasi data pribadi (GDPR, PII).</p></li>
+<li><p>Menghindari bias dalam model.</p></li>
+<li><p>Transparansi hasil analisis.</p></li>
+</ul>
+</section>
+<section id="kesimpulan">
+<h2>Kesimpulan<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h2>
+<p>Web mining adalah bidang multidisiplin yang menggabungkan data mining, IR, NLP, dan analisis graf untuk mengekstrak nilai dari data web. Meski penuh tantangan teknis dan etika, manfaatnya besar bagi bisnis, riset, dan layanan publik.</p>
+<hr class="docutils" />
+<section id="referensi">
+<h3>Referensi<a class="headerlink" href="#referensi" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Etzioni, O. (1996). <em>CACM 39</em>.</p></li>
+<li><p>Bing Liu (2007). <em>Web Data Mining</em>.</p></li>
+</ul>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -434,7 +541,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Crawling</p>
+        <p class="prev-next-title">Tugas 1 | Crawling Springer Nature</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -444,6 +551,32 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-singkat">Ringkasan Singkat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi">Definisi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-web-mining">Klasifikasi Web Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tantangan">Tantangan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tahapan-web-mining">Tahapan Web Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-umum">Algoritma Umum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi">Aplikasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etika-privasi">Etika &amp; Privasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referensi">Referensi</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

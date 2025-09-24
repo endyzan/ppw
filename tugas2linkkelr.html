@@ -1,0 +1,844 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tugas 2 | Link Keluaran &#8212; Project PPW</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas2linkkelr';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tugas 3 | Preprocessing" href="tugas3.html" />
+    <link rel="prev" title="Tugas 2 | Crawling Berita" href="tugas2crwberita.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/foto_logo.jpg" class="logo__image only-light" alt="Project PPW - Home"/>
+    <script>document.write(`<img src="_static/foto_logo.jpg" class="logo__image only-dark" alt="Project PPW - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to Pencarian & Penambangan Web {PPW}
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas1.html">Tugas 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="tugas1profile.html">Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas1pengantar.html">Pengantar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas1crawling.html">Crawling</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tugas2.html">Tugas 2</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tugas2crwpta.html">Crawling jurnal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas2crwberita.html">Crawling Berita</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Link keluaran</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3.html">Tugas 3</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas2linkkelr.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tugas2linkkelr.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tugas 2 | Link Keluaran</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-2-link-keluaran">
+<h1>Tugas 2 | Link Keluaran<a class="headerlink" href="#tugas-2-link-keluaran" title="Link to this heading">#</a></h1>
+<p>Tugas 2 link keluaran ini tujuannya untuk merekam riwayat navigasi
+Saat user membuka browser dan menjelajahi situs,
+setiap perubahan URL akan direkam (dari link asal
+ke link tujuan), lalu hasilnya disimpan ke CSV.</p>
+<p>Berikut Code nya:</p>
+<p><strong>Import Library</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="o">!{</span>sys.executable<span class="o">}</span><span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>selenium
+<span class="kn">from</span><span class="w"> </span><span class="nn">selenium</span><span class="w"> </span><span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">selenium.webdriver.chrome.options</span><span class="w"> </span><span class="kn">import</span> <span class="n">Options</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting selenium
+  Using cached selenium-4.35.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting urllib3&lt;3.0,&gt;=2.5.0 (from urllib3[socks]&lt;3.0,&gt;=2.5.0-&gt;selenium)
+  Using cached urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting trio~=0.30.0 (from selenium)
+  Using cached trio-0.30.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting trio-websocket~=0.12.2 (from selenium)
+  Using cached trio_websocket-0.12.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting certifi&gt;=2025.6.15 (from selenium)
+  Using cached certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+Collecting typing_extensions~=4.14.0 (from selenium)
+  Downloading typing_extensions-4.14.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting websocket-client~=1.8.0 (from selenium)
+  Using cached websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+Requirement already satisfied: attrs&gt;=23.2.0 in c:\users\endyzan\appdata\local\programs\python\python313\lib\site-packages (from trio~=0.30.0-&gt;selenium) (25.1.0)
+Collecting sortedcontainers (from trio~=0.30.0-&gt;selenium)
+  Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: idna in c:\users\endyzan\appdata\local\programs\python\python313\lib\site-packages (from trio~=0.30.0-&gt;selenium) (3.10)
+Collecting outcome (from trio~=0.30.0-&gt;selenium)
+  Using cached outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+Collecting sniffio&gt;=1.3.0 (from trio~=0.30.0-&gt;selenium)
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Requirement already satisfied: cffi&gt;=1.14 in c:\users\endyzan\appdata\local\programs\python\python313\lib\site-packages (from trio~=0.30.0-&gt;selenium) (1.17.1)
+Collecting wsproto&gt;=0.14 (from trio-websocket~=0.12.2-&gt;selenium)
+  Using cached wsproto-1.2.0-py3-none-any.whl.metadata (5.6 kB)
+Collecting pysocks!=1.5.7,&lt;2.0,&gt;=1.5.6 (from urllib3[socks]&lt;3.0,&gt;=2.5.0-&gt;selenium)
+  Using cached PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: pycparser in c:\users\endyzan\appdata\local\programs\python\python313\lib\site-packages (from cffi&gt;=1.14-&gt;trio~=0.30.0-&gt;selenium) (2.22)
+Collecting h11&lt;1,&gt;=0.9.0 (from wsproto&gt;=0.14-&gt;trio-websocket~=0.12.2-&gt;selenium)
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Using cached selenium-4.35.0-py3-none-any.whl (9.6 MB)
+Using cached trio-0.30.0-py3-none-any.whl (499 kB)
+Using cached trio_websocket-0.12.2-py3-none-any.whl (21 kB)
+Downloading typing_extensions-4.14.1-py3-none-any.whl (43 kB)
+Using cached urllib3-2.5.0-py3-none-any.whl (129 kB)
+Using cached PySocks-1.7.1-py3-none-any.whl (16 kB)
+Using cached websocket_client-1.8.0-py3-none-any.whl (58 kB)
+Using cached certifi-2025.8.3-py3-none-any.whl (161 kB)
+Using cached outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached wsproto-1.2.0-py3-none-any.whl (24 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Installing collected packages: sortedcontainers, websocket-client, urllib3, typing_extensions, sniffio, pysocks, outcome, h11, certifi, wsproto, trio, trio-websocket, selenium
+
+   ----------------------------------------  0/13 [sortedcontainers]
+   --- ------------------------------------  1/13 [websocket-client]
+   --- ------------------------------------  1/13 [websocket-client]
+   --- ------------------------------------  1/13 [websocket-client]
+   --- ------------------------------------  1/13 [websocket-client]
+   --- ------------------------------------  1/13 [websocket-client]
+   --- ------------------------------------  1/13 [websocket-client]
+   --- ------------------------------------  1/13 [websocket-client]
+   --- ------------------------------------  1/13 [websocket-client]
+   --- ------------------------------------  1/13 [websocket-client]
+   --- ------------------------------------  1/13 [websocket-client]
+   --- ------------------------------------  1/13 [websocket-client]
+   --- ------------------------------------  1/13 [websocket-client]
+  Attempting uninstall: urllib3
+   --- ------------------------------------  1/13 [websocket-client]
+   ------ ---------------------------------  2/13 [urllib3]
+    Found existing installation: urllib3 2.3.0
+   ------ ---------------------------------  2/13 [urllib3]
+    Uninstalling urllib3-2.3.0:
+   ------ ---------------------------------  2/13 [urllib3]
+   ------ ---------------------------------  2/13 [urllib3]
+      Successfully uninstalled urllib3-2.3.0
+   ------ ---------------------------------  2/13 [urllib3]
+   ------ ---------------------------------  2/13 [urllib3]
+   ------ ---------------------------------  2/13 [urllib3]
+   ------ ---------------------------------  2/13 [urllib3]
+   ------ ---------------------------------  2/13 [urllib3]
+   ------ ---------------------------------  2/13 [urllib3]
+   ------ ---------------------------------  2/13 [urllib3]
+   ------ ---------------------------------  2/13 [urllib3]
+   ------ ---------------------------------  2/13 [urllib3]
+  Attempting uninstall: typing_extensions
+   ------ ---------------------------------  2/13 [urllib3]
+    Found existing installation: typing_extensions 4.12.2
+   ------ ---------------------------------  2/13 [urllib3]
+    Uninstalling typing_extensions-4.12.2:
+   ------ ---------------------------------  2/13 [urllib3]
+   --------- ------------------------------  3/13 [typing_extensions]
+   --------- ------------------------------  3/13 [typing_extensions]
+   --------- ------------------------------  3/13 [typing_extensions]
+   --------- ------------------------------  3/13 [typing_extensions]
+   --------- ------------------------------  3/13 [typing_extensions]
+   --------- ------------------------------  3/13 [typing_extensions]
+   --------- ------------------------------  3/13 [typing_extensions]
+   --------- ------------------------------  3/13 [typing_extensions]
+   --------- ------------------------------  3/13 [typing_extensions]
+   --------- ------------------------------  3/13 [typing_extensions]
+   --------- ------------------------------  3/13 [typing_extensions]
+      Successfully uninstalled typing_extensions-4.12.2
+   --------- ------------------------------  3/13 [typing_extensions]
+   --------- ------------------------------  3/13 [typing_extensions]
+   ------------ ---------------------------  4/13 [sniffio]
+   ------------------ ---------------------  6/13 [outcome]
+   --------------------- ------------------  7/13 [h11]
+   --------------------- ------------------  7/13 [h11]
+   --------------------- ------------------  7/13 [h11]
+  Attempting uninstall: certifi
+   --------------------- ------------------  7/13 [h11]
+    Found existing installation: certifi 2025.1.31
+   --------------------- ------------------  7/13 [h11]
+   ------------------------ ---------------  8/13 [certifi]
+    Uninstalling certifi-2025.1.31:
+   ------------------------ ---------------  8/13 [certifi]
+      Successfully uninstalled certifi-2025.1.31
+   ------------------------ ---------------  8/13 [certifi]
+   --------------------------- ------------  9/13 [wsproto]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   ------------------------------ --------- 10/13 [trio]
+   --------------------------------- ------ 11/13 [trio-websocket]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ------------------------------------ --- 12/13 [selenium]
+   ---------------------------------------- 13/13 [selenium]
+
+Successfully installed certifi-2025.8.3 h11-0.16.0 outcome-1.3.0.post0 pysocks-1.7.1 selenium-4.35.0 sniffio-1.3.1 sortedcontainers-2.4.0 trio-0.30.0 trio-websocket-0.12.2 typing_extensions-4.14.1 urllib3-2.5.0 websocket-client-1.8.0 wsproto-1.2.0
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 25.1.1 -&gt; 25.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Konfigurasi Chrome</span>
+<span class="n">chrome_options</span> <span class="o">=</span> <span class="n">Options</span><span class="p">()</span>
+
+<span class="c1"># Inisialisasi browser Chrome dengan opsi yang sudah ditentukan</span>
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="n">chrome_options</span><span class="p">)</span>
+
+<span class="c1"># Buka website awal (dalam contoh: Fakultas Hukum UTM)</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://hukum.trunojoyo.ac.id/&quot;</span><span class="p">)</span>
+
+<span class="c1"># List untuk menyimpan catatan riwayat URL</span>
+<span class="n">records</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Simpan URL awal</span>
+<span class="n">last_url</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">current_url</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🔎 Browser terbuka. Silakan jelajahi situs secara manual.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;⏳ Tekan CTRL + C di terminal jika sudah selesai.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># cek setiap 1 detik apakah ada perubahan URL</span>
+        <span class="n">current_url</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">current_url</span>
+        <span class="k">if</span> <span class="n">current_url</span> <span class="o">!=</span> <span class="n">last_url</span><span class="p">:</span>
+            <span class="c1"># Jika URL berubah, simpan pasangan (dari -&gt; ke)</span>
+            <span class="n">records</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">last_url</span><span class="p">,</span> <span class="n">current_url</span><span class="p">])</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">last_url</span><span class="p">,</span> <span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">current_url</span><span class="p">)</span>
+            <span class="n">last_url</span> <span class="o">=</span> <span class="n">current_url</span>
+<span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+    <span class="c1"># Program berhenti manual dengan CTRL + C</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🛑 Perekaman dihentikan oleh user.&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="c1"># Simpan hasil rekaman navigasi ke file CSV</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;history_links.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s2">&quot;link_akses&quot;</span><span class="p">,</span> <span class="s2">&quot;link_keluaran&quot;</span><span class="p">])</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">records</span><span class="p">)</span>
+
+    <span class="c1"># Tutup browser setelah selesai</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Riwayat navigasi disimpan ke history_links.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🔎 Browser terbuka. Silakan jelajahi situs secara manual.
+⏳ Tekan CTRL + C di terminal jika sudah selesai.
+
+https://hukum.trunojoyo.ac.id/ -&gt; https://hukum.trunojoyo.ac.id/about-us/#sejarah
+https://hukum.trunojoyo.ac.id/about-us/#sejarah -&gt; https://hukum.trunojoyo.ac.id/s2-hukum/#strukturs2
+https://hukum.trunojoyo.ac.id/s2-hukum/#strukturs2 -&gt; https://hukum.trunojoyo.ac.id/jaringan-dokumentasi-ilmu-hukum/
+https://hukum.trunojoyo.ac.id/jaringan-dokumentasi-ilmu-hukum/ -&gt; https://hukum.trunojoyo.ac.id/tendik/
+https://hukum.trunojoyo.ac.id/tendik/ -&gt; https://hukum.trunojoyo.ac.id/rencana-strategis-dan-program-kerja/
+https://hukum.trunojoyo.ac.id/rencana-strategis-dan-program-kerja/ -&gt; https://hukum.trunojoyo.ac.id/pusat-studi-pancasila-dan-konstitusi/
+✅ Riwayat navigasi disimpan ke history_links.csv
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NoSuchWindowException</span><span class="g g-Whitespace">                     </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">24</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">24</span>     <span class="n">current_url</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">current_url</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="k">if</span> <span class="n">current_url</span> <span class="o">!=</span> <span class="n">last_url</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span>         <span class="c1"># Rekam perubahan URL</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span>         <span class="n">records</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">last_url</span><span class="p">,</span> <span class="n">current_url</span><span class="p">])</span>
+
+<span class="nn">File c:\Users\endyzan\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py:587,</span> in <span class="ni">WebDriver.current_url</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">579</span> <span class="nd">@property</span>
+<span class="g g-Whitespace">    </span><span class="mi">580</span> <span class="k">def</span><span class="w"> </span><span class="nf">current_url</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">581</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Gets the URL of the current page.</span>
+<span class="g g-Whitespace">    </span><span class="mi">582</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">583</span><span class="sd">     Example:</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span><span class="sd">     --------</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span><span class="sd">     &gt;&gt;&gt; print(driver.current_url)</span>
+<span class="g g-Whitespace">    </span><span class="mi">586</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">587</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">Command</span><span class="o">.</span><span class="n">GET_CURRENT_URL</span><span class="p">)[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span>
+
+<span class="nn">File c:\Users\endyzan\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py:458,</span> in <span class="ni">WebDriver.execute</span><span class="nt">(self, driver_command, params)</span>
+<span class="g g-Whitespace">    </span><span class="mi">455</span> <span class="n">response</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">RemoteConnection</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">command_executor</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">driver_command</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">457</span> <span class="k">if</span> <span class="n">response</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">458</span>     <span class="bp">self</span><span class="o">.</span><span class="n">error_handler</span><span class="o">.</span><span class="n">check_response</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">459</span>     <span class="n">response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_unwrap_value</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">460</span>     <span class="k">return</span> <span class="n">response</span>
+
+<span class="nn">File c:\Users\endyzan\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:232,</span> in <span class="ni">ErrorHandler.check_response</span><span class="nt">(self, response)</span>
+<span class="g g-Whitespace">    </span><span class="mi">230</span>         <span class="n">alert_text</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="s2">&quot;alert&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">231</span>     <span class="k">raise</span> <span class="n">exception_class</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">screen</span><span class="p">,</span> <span class="n">stacktrace</span><span class="p">,</span> <span class="n">alert_text</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]  # mypy is not smart enough here</span>
+<span class="ne">--&gt; </span><span class="mi">232</span> <span class="k">raise</span> <span class="n">exception_class</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">screen</span><span class="p">,</span> <span class="n">stacktrace</span><span class="p">)</span>
+
+<span class="ne">NoSuchWindowException</span>: Message: no such window: target window already closed
+<span class="kn">from</span><span class="w"> </span><span class="nn">unknown</span> <span class="n">error</span><span class="p">:</span> <span class="n">web</span> <span class="n">view</span> <span class="ow">not</span> <span class="n">found</span>
+  <span class="p">(</span><span class="n">Session</span> <span class="n">info</span><span class="p">:</span> <span class="n">chrome</span><span class="o">=</span><span class="mf">126.0.6478.127</span><span class="p">)</span>
+<span class="ne">Stacktrace</span>:
+	<span class="n">GetHandleVerifier</span> <span class="p">[</span><span class="mh">0x00007FF60FD1EEB2</span><span class="o">+</span><span class="mi">31554</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF60FC97EE9</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF60FB5872A</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF60FB2D995</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF60FBD44D7</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF60FBEC051</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF60FBCCDD3</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF60FB9A33B</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF60FB9AED1</span><span class="p">]</span>
+	<span class="n">GetHandleVerifier</span> <span class="p">[</span><span class="mh">0x00007FF610028B2D</span><span class="o">+</span><span class="mi">3217341</span><span class="p">]</span>
+	<span class="n">GetHandleVerifier</span> <span class="p">[</span><span class="mh">0x00007FF610075AF3</span><span class="o">+</span><span class="mi">3532675</span><span class="p">]</span>
+	<span class="n">GetHandleVerifier</span> <span class="p">[</span><span class="mh">0x00007FF61006B0F0</span><span class="o">+</span><span class="mi">3489152</span><span class="p">]</span>
+	<span class="n">GetHandleVerifier</span> <span class="p">[</span><span class="mh">0x00007FF60FDCE786</span><span class="o">+</span><span class="mi">750614</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF60FCA376F</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF60FC9EB24</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF60FC9ECB2</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF60FC8E17F</span><span class="p">]</span>
+	<span class="n">BaseThreadInitThunk</span> <span class="p">[</span><span class="mh">0x00007FF9B65B7374</span><span class="o">+</span><span class="mi">20</span><span class="p">]</span>
+	<span class="n">RtlUserThreadStart</span> <span class="p">[</span><span class="mh">0x00007FF9B6C9CC91</span><span class="o">+</span><span class="mi">33</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tugas2crwberita.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tugas 2 | Crawling Berita</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tugas3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tugas 3 | Preprocessing</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By 220411100176 - Ahmad Andi Zainuri
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
