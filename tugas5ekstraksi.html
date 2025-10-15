@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tugas 1 | Pengantar Web Mining &#8212; Project PPW</title>
+    <title>Tugas 5 | Ekstraksi -&gt; LDA &#8212; Project PPW</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas1pengantar';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas5ekstraksi';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas 1 | Crawling Springer Nature" href="tugas1crawling.html" />
-    <link rel="prev" title="Tugas 1 | Profile" href="tugas1profile.html" />
+    <link rel="next" title="Tugas 5 | Klasifikasi -&gt; LDA" href="tugas5klasifikasi.html" />
+    <link rel="prev" title="Tugas 5" href="tugas5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -176,10 +176,10 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="tugas1.html">Tugas 1</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas1.html">Tugas 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="tugas1profile.html">Profile</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Pengantar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas1pengantar.html">Pengantar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas1crawling.html">Crawling</a></li>
 </ul>
 </li>
@@ -266,7 +266,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas1pengantar.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas5ekstraksi.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +296,7 @@
       
       
       
-      <li><a href="_sources/tugas1pengantar.md" target="_blank"
+      <li><a href="_sources/tugas5ekstraksi.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -306,7 +306,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -380,7 +380,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas 1 | Pengantar Web Mining</h1>
+    <h1>Tugas 5 | Ekstraksi -> LDA</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -390,24 +390,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan">1. Pendahuluan</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-web-mining">2. Definisi Web Mining</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tantangan-dalam-web-mining">3. Tantangan dalam Web Mining</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taksonomi-web-mining">4. Taksonomi Web Mining</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#web-content-mining">🔹 Web Content Mining</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#web-structure-mining">🔹 Web Structure Mining</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#web-usage-mining">🔹 Web Usage Mining</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-web-mining">5. Proses Web Mining</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-gathering-exploration">🔸 Data Gathering &amp; Exploration</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-transformation">🔸 Preprocessing &amp; Transformation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actual-data-mining">🔸 Actual Data Mining</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-deployment">🔸 Evaluation &amp; Deployment</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-aplikasi-nyata">6. Contoh Aplikasi Nyata</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penutup">7. Penutup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lda">LDA</a></li>
 </ul>
             </nav>
         </div>
@@ -419,121 +402,114 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-1-pengantar-web-mining">
-<h1>Tugas 1 | Pengantar Web Mining<a class="headerlink" href="#tugas-1-pengantar-web-mining" title="Link to this heading">#</a></h1>
-<hr class="docutils" />
-<section id="pendahuluan">
-<h2>1. Pendahuluan<a class="headerlink" href="#pendahuluan" title="Link to this heading">#</a></h2>
-<p>Di era digital saat ini, internet bukan lagi sekadar media komunikasi, melainkan juga gudang data raksasa yang terus bertambah setiap detik. Jutaan website aktif menyimpan informasi dalam berbagai bentuk: teks, gambar, video, maupun data terstruktur. Namun, besarnya volume data web justru menimbulkan tantangan baru: bagaimana cara menggali pengetahuan yang bermanfaat dari lautan data tersebut? Di sinilah <strong>Web Mining</strong> berperan.</p>
-<p><strong>Web Mining</strong> atau penambangan web adalah cabang dari data mining yang secara khusus berfokus pada ekstraksi informasi, penemuan pola, dan penggalian pengetahuan dari data berbasis web. Konsep ini menggabungkan berbagai disiplin ilmu seperti <em>machine learning, natural language processing, database systems,</em> dan <em>analisis jaringan sosial</em>. Hasil dari Web Mining dapat dimanfaatkan untuk berbagai tujuan, mulai dari sistem rekomendasi produk, analisis perilaku pengguna, deteksi tren, hingga optimasi mesin pencari.</p>
-</section>
-<hr class="docutils" />
-<section id="definisi-web-mining">
-<h2>2. Definisi Web Mining<a class="headerlink" href="#definisi-web-mining" title="Link to this heading">#</a></h2>
-<p>Secara sederhana, Web Mining dapat didefinisikan sebagai proses <strong>menemukan pola dan pengetahuan yang tersembunyi dari data web</strong>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-5-ekstraksi-lda">
+<h1>Tugas 5 | Ekstraksi -&gt; LDA<a class="headerlink" href="#tugas-5-ekstraksi-lda" title="Link to this heading">#</a></h1>
+<p>Tugas 5 melakuakan Ekstrkasi Fitur menggunakan <strong>Latent Dirichlet Allocation (LDA).</strong></p>
+<p>Kolom yang digunakan:</p>
 <ul class="simple">
-<li><p>Menurut <em>Etzioni (1996)</em>: Web Mining adalah penggunaan teknik penambangan data untuk secara otomatis menemukan serta mengekstrak informasi dari layanan web.</p></li>
-<li><p>Menurut <em>Bing Liu (2007)</em>: tujuan utama Web Mining adalah menemukan pola berguna dari <strong>struktur hyperlink, isi halaman web, dan perilaku pengguna</strong>.</p></li>
+<li><p>clean_stemmed (fitur text)</p></li>
+<li><p>Kategori (label)</p></li>
 </ul>
-<p>Dengan kata lain, Web Mining tidak hanya sekadar membaca data web, tetapi juga memahami <strong>makna, keterkaitan, dan tren</strong> yang terkandung di dalamnya.</p>
-</section>
-<hr class="docutils" />
-<section id="tantangan-dalam-web-mining">
-<h2>3. Tantangan dalam Web Mining<a class="headerlink" href="#tantangan-dalam-web-mining" title="Link to this heading">#</a></h2>
-<p>Meskipun potensinya besar, Web Mining menghadapi banyak tantangan:</p>
-<ul class="simple">
-<li><p><strong>Skala Data yang Besar</strong> – Web berisi miliaran halaman dan terus berkembang setiap saat.</p></li>
-<li><p><strong>Format Data yang Beragam</strong> – Data tersedia dalam bentuk HTML, XML, teks bebas, gambar, audio, hingga video.</p></li>
-<li><p><strong>Kompleksitas dan Dinamika</strong> – Struktur web sangat kompleks dan sifatnya dinamis, karena konten bisa berubah sewaktu-waktu.</p></li>
-<li><p><strong>Tidak Spesifik</strong> – Web mencakup semua domain pengetahuan, sehingga proses mining sering kali memerlukan fokus domain tertentu.</p></li>
-</ul>
-<p>Karena itulah, dibutuhkan teknik pengolahan data yang cerdas, fleksibel, dan efisien agar hasil Web Mining benar-benar bermanfaat.</p>
-</section>
-<hr class="docutils" />
-<section id="taksonomi-web-mining">
-<h2>4. Taksonomi Web Mining<a class="headerlink" href="#taksonomi-web-mining" title="Link to this heading">#</a></h2>
-<p><img alt="Taksonomi" src="_static/taksonomi.png" /></p>
-<p>Secara garis besar, Web Mining terbagi menjadi tiga bidang utama:</p>
-<section id="web-content-mining">
-<h3>🔹 Web Content Mining<a class="headerlink" href="#web-content-mining" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>Fokus</strong>: konten halaman web.</p></li>
-<li><p><strong>Bentuk data</strong>: teks, gambar, audio, video, tabel, atau metadata.</p></li>
-<li><p><strong>Aplikasi</strong>: <em>text mining</em> untuk klasifikasi dokumen, analisis sentimen, ekstraksi kata kunci, hingga rekomendasi berbasis konten.</p></li>
-</ul>
-</section>
-<section id="web-structure-mining">
-<h3>🔹 Web Structure Mining<a class="headerlink" href="#web-structure-mining" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>Fokus</strong>: struktur hyperlink dan keterkaitan antarhalaman.</p></li>
-<li><p><strong>Tujuan</strong>: menemukan otoritas halaman (contoh: PageRank Google), deteksi komunitas dalam jaringan sosial, atau analisis hubungan antar pengguna.</p></li>
-</ul>
-</section>
-<section id="web-usage-mining">
-<h3>🔹 Web Usage Mining<a class="headerlink" href="#web-usage-mining" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>Fokus</strong>: perilaku pengguna saat berinteraksi dengan website.</p></li>
-<li><p><strong>Data</strong>: log server, clickstream, cookie, metadata akses.</p></li>
-<li><p><strong>Aplikasi</strong>: personalisasi layanan, sistem rekomendasi produk, prediksi perilaku pengguna, optimasi desain website.</p></li>
-</ul>
-<p>Ketiga bidang ini saling melengkapi. Misalnya, konten dapat digali untuk menemukan topik, struktur untuk mengetahui hubungan antar sumber, dan penggunaan untuk memahami preferensi pengguna.</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="proses-web-mining">
-<h2>5. Proses Web Mining<a class="headerlink" href="#proses-web-mining" title="Link to this heading">#</a></h2>
-<p><img alt="Taksonomi" src="_static/proseswebmining.png" /></p>
-<p>Seperti halnya data mining, Web Mining juga melalui beberapa tahapan utama:</p>
-<section id="data-gathering-exploration">
-<h3>🔸 Data Gathering &amp; Exploration<a class="headerlink" href="#data-gathering-exploration" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Mengumpulkan data dari web dengan <em>web crawling</em> atau API.</p></li>
-<li><p>Mengeksplorasi data untuk memahami karakteristik awalnya.</p></li>
-</ul>
-</section>
-<section id="preprocessing-transformation">
-<h3>🔸 Preprocessing &amp; Transformation<a class="headerlink" href="#preprocessing-transformation" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Membersihkan data dari noise.</p></li>
-<li><p>Transformasi teks menjadi vektor atau embedding.</p></li>
-<li><p>Seleksi fitur, reduksi dimensi, dan integrasi sumber data.</p></li>
-<li><p>Tahap ini biasanya memakan <strong>70–80% waktu proyek</strong> karena persiapan data menentukan kualitas model.</p></li>
-</ul>
-</section>
-<section id="actual-data-mining">
-<h3>🔸 Actual Data Mining<a class="headerlink" href="#actual-data-mining" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Menerapkan algoritma <em>machine learning</em> (supervised, unsupervised, atau deep learning).</p></li>
-<li><p>Menghasilkan model, pola, atau pengetahuan dari data.</p></li>
-</ul>
-</section>
-<section id="evaluation-deployment">
-<h3>🔸 Evaluation &amp; Deployment<a class="headerlink" href="#evaluation-deployment" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Mengevaluasi kualitas model dengan metrik tertentu.</p></li>
-<li><p>Mengimplementasikan hasil ke sistem nyata seperti mesin rekomendasi, search engine, atau dashboard analitik.</p></li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="contoh-aplikasi-nyata">
-<h2>6. Contoh Aplikasi Nyata<a class="headerlink" href="#contoh-aplikasi-nyata" title="Link to this heading">#</a></h2>
-<p>Beberapa contoh penerapan Web Mining dalam kehidupan sehari-hari:</p>
-<ul class="simple">
-<li><p><strong>Google Search</strong> → menggunakan algoritma <em>PageRank</em> (Web Structure Mining).</p></li>
-<li><p><strong>Sistem Rekomendasi E-Commerce</strong> (Tokopedia, Shopee, Amazon) → menganalisis clickstream dan pola belanja (Web Usage Mining).</p></li>
-<li><p><strong>Analisis Sentimen Media Sosial</strong> → memantau opini publik terhadap isu tertentu (Web Content Mining).</p></li>
-<li><p><strong>Deteksi Komunitas di Jaringan Sosial</strong> → memetakan kelompok pengguna dengan interaksi intensif (Web Structure Mining).</p></li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="penutup">
-<h2>7. Penutup<a class="headerlink" href="#penutup" title="Link to this heading">#</a></h2>
-<p>Web Mining adalah jembatan antara data masif di internet dengan kebutuhan informasi yang lebih bermakna. Dengan memahami konten, struktur, dan pola penggunaan web, para peneliti maupun praktisi dapat menghadirkan solusi cerdas dalam berbagai bidang seperti bisnis, pemerintahan, pendidikan, maupun kesehatan.</p>
-<p>Seiring perkembangan teknologi seperti <strong>big data, machine learning, dan artificial intelligence</strong>, peran Web Mining akan semakin krusial dalam mengubah data mentah menjadi pengetahuan yang bernilai.</p>
-<blockquote>
-<div><p>Singkatnya, Web Mining adalah <em>“mata”</em> yang membantu kita melihat pola tersembunyi di balik layar internet, sehingga informasi yang tersebar bisa terorganisir menjadi wawasan yang berguna.</p>
-</div></blockquote>
+<section id="lda">
+<h2>LDA<a class="headerlink" href="#lda" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">LatentDirichletAllocation</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+
+<span class="c1"># Baca dataset</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;detik_cleaned.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Pastikan kolom yang diperlukan ada</span>
+<span class="n">required_cols</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;clean_stemmed&quot;</span><span class="p">,</span> <span class="s2">&quot;Kategori&quot;</span><span class="p">}</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">required_cols</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dataset harus punya kolom: </span><span class="si">{</span><span class="n">required_cols</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Ambil kolom teks yang sudah dibersihkan</span>
+<span class="n">texts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;clean_stemmed&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+
+<span class="c1"># Ubah teks ke bentuk Bag of Words</span>
+<span class="c1"># LDA tidak bisa langsung pakai teks mentah, harus pakai CountVectorizer</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span>
+    <span class="n">max_df</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="c1"># abaikan kata yang muncul di &gt;95% dokumen</span>
+    <span class="n">min_df</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="c1"># abaikan kata yang muncul &lt;2 dokumen</span>
+    <span class="n">stop_words</span><span class="o">=</span><span class="kc">None</span> <span class="c1"># karena teks kamu sudah bersih</span>
+<span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah dokumen: </span><span class="si">{</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, Jumlah kata unik: </span><span class="si">{</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Inisialisasi dan latih model LDA</span>
+<span class="n">n_topics</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">lda_model</span> <span class="o">=</span> <span class="n">LatentDirichletAllocation</span><span class="p">(</span>
+    <span class="n">n_components</span><span class="o">=</span><span class="n">n_topics</span><span class="p">,</span>
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
+    <span class="n">learning_method</span><span class="o">=</span><span class="s1">&#39;batch&#39;</span>
+<span class="p">)</span>
+
+<span class="n">lda_features</span> <span class="o">=</span> <span class="n">lda_model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>  <span class="c1"># menghasilkan distribusi topik untuk tiap dokumen</span>
+
+<span class="c1"># Konversi hasil LDA ke DataFrame</span>
+<span class="n">lda_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">lda_features</span><span class="p">,</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Topic_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_topics</span><span class="p">)]</span>
+<span class="p">)</span>
+
+<span class="c1"># Tambahkan kolom kategori supaya siap untuk klasifikasi</span>
+<span class="n">lda_df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Kategori&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">texts</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="s2">&quot;Kategori&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+
+<span class="c1"># Simpan ke CSV</span>
+<span class="n">lda_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;lda_result.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Ekstraksi fitur LDA berhasil disimpan sebagai lda_result.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># (Opsional) Tampilkan kata paling dominan di tiap topik</span>
+<span class="k">def</span> <span class="nf">print_top_words</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">feature_names</span><span class="p">,</span> <span class="n">n_top_words</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">topic_idx</span><span class="p">,</span> <span class="n">topic</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">components_</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🟩 Topik </span><span class="si">{</span><span class="n">topic_idx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">feature_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">topic</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[:</span><span class="o">-</span><span class="n">n_top_words</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]]))</span>
+
+<span class="n">print_top_words</span><span class="p">(</span><span class="n">lda_model</span><span class="p">,</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah dokumen: 100, Jumlah kata unik: 1342
+✅ Ekstraksi fitur LDA berhasil disimpan sebagai lda_result.csv
+
+🟩 Topik 1:
+latih anda ada indonesia para isi alat air pelatnas di
+
+🟩 Topik 2:
+hidup jelas di hanya yang milik kita sama cara bahasa
+
+🟩 Topik 3:
+air apa jakarta main pertama di proliga putri 2024 voli
+
+🟩 Topik 4:
+guna di alat milik orang temu cara itu hasil sehat
+
+🟩 Topik 5:
+suara motogp guna marquez balap musik bagnaia menang martin foto
+
+🟩 Topik 6:
+jauh guna balap apa salah ilmuwan langkah memang di temu
+
+🟩 Topik 7:
+lokasi kerja tempat di sehat media kontrak posisi wilayah apa
+
+🟩 Topik 8:
+guru 2024 didik guna di mata sistem itu apa ajar
+
+🟩 Topik 9:
+2025 januari air sekolah mudah kita bisa anak awal nomor
+
+🟩 Topik 10:
+barang pesawat buku air mahasiswa guna ada hidup sebab dapat
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -568,20 +544,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="tugas1profile.html"
+       href="tugas5.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tugas 1 | Profile</p>
+        <p class="prev-next-title">Tugas 5</p>
       </div>
     </a>
     <a class="right-next"
-       href="tugas1crawling.html"
+       href="tugas5klasifikasi.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas 1 | Crawling Springer Nature</p>
+        <p class="prev-next-title">Tugas 5 | Klasifikasi -&gt; LDA</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -601,24 +577,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan">1. Pendahuluan</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-web-mining">2. Definisi Web Mining</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tantangan-dalam-web-mining">3. Tantangan dalam Web Mining</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taksonomi-web-mining">4. Taksonomi Web Mining</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#web-content-mining">🔹 Web Content Mining</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#web-structure-mining">🔹 Web Structure Mining</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#web-usage-mining">🔹 Web Usage Mining</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-web-mining">5. Proses Web Mining</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-gathering-exploration">🔸 Data Gathering &amp; Exploration</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-transformation">🔸 Preprocessing &amp; Transformation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actual-data-mining">🔸 Actual Data Mining</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-deployment">🔸 Evaluation &amp; Deployment</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-aplikasi-nyata">6. Contoh Aplikasi Nyata</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penutup">7. Penutup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lda">LDA</a></li>
 </ul>
   </nav></div>
 
