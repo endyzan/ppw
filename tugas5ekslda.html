@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to Pencarian &amp; Penambangan Web {PPW} &#8212; Project PPW</title>
+    <title>Tugas 5 | Ekstraksi - LDA &#8212; Project PPW</title>
   
   
   
@@ -57,10 +57,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas5ekslda';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas 1" href="tugas1.html" />
+    <link rel="next" title="Tugas 5 | Klasifikasi - LDA" href="tugas5klaslda.html" />
+    <link rel="prev" title="Tugas 5" href="tugass5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +123,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -140,7 +139,7 @@
 
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -171,8 +170,8 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Welcome to Pencarian & Penambangan Web {PPW}
                 </a>
             </li>
@@ -267,7 +266,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas5ekslda.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -297,7 +296,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/tugas5ekslda.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -307,7 +306,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -381,7 +380,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to Pencarian & Penambangan Web {PPW}</h1>
+    <h1>Tugas 5 | Ekstraksi - LDA</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -391,7 +390,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#daftar-isi">Daftar Isi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lda">LDA</a></li>
 </ul>
             </nav>
         </div>
@@ -403,21 +402,115 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-pencarian-penambangan-web-ppw">
-<h1>Welcome to Pencarian &amp; Penambangan Web {PPW}<a class="headerlink" href="#welcome-to-pencarian-penambangan-web-ppw" title="Link to this heading">#</a></h1>
-<p>Repositori Tugas PPW dari awal pertemuan sampai akhir pertemuan.</p>
-<section id="daftar-isi">
-<h2>Daftar Isi<a class="headerlink" href="#daftar-isi" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-5-ekstraksi-lda">
+<h1>Tugas 5 | Ekstraksi - LDA<a class="headerlink" href="#tugas-5-ekstraksi-lda" title="Link to this heading">#</a></h1>
+<p>Tugas 5 melakuakan Ekstrkasi Fitur menggunakan <strong>Latent Dirichlet Allocation (LDA).</strong></p>
+<p>Kolom yang digunakan:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="tugas1.html"><span class="std std-doc">Tugas 1</span></a></p></li>
-<li><p><a class="reference internal" href="tugas2.html"><span class="std std-doc">Tugas 2</span></a></p></li>
-<li><p><a class="reference internal" href="tugas3.html"><span class="std std-doc">Tugas 3</span></a></p></li>
-<li><p><a class="reference internal" href="tugas4.html"><span class="std std-doc">Tugas 4</span></a></p></li>
-<li><p><a class="reference internal" href="#tugas5.md"><span class="xref myst">Tugas 5</span></a></p></li>
+<li><p>clean_stemmed (fitur text)</p></li>
+<li><p>Kategori (label)</p></li>
 </ul>
-</section>
-<div class="toctree-wrapper compound">
+<section id="lda">
+<h2>LDA<a class="headerlink" href="#lda" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">LatentDirichletAllocation</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+
+<span class="c1"># Baca dataset</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;detik_cleaned.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Pastikan kolom yang diperlukan ada</span>
+<span class="n">required_cols</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;clean_stemmed&quot;</span><span class="p">,</span> <span class="s2">&quot;Kategori&quot;</span><span class="p">}</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">required_cols</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dataset harus punya kolom: </span><span class="si">{</span><span class="n">required_cols</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Ambil kolom teks yang sudah dibersihkan</span>
+<span class="n">texts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;clean_stemmed&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+
+<span class="c1"># Ubah teks ke bentuk Bag of Words</span>
+<span class="c1"># LDA tidak bisa langsung pakai teks mentah, harus pakai CountVectorizer</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span>
+    <span class="n">max_df</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="c1"># abaikan kata yang muncul di &gt;95% dokumen</span>
+    <span class="n">min_df</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="c1"># abaikan kata yang muncul &lt;2 dokumen</span>
+    <span class="n">stop_words</span><span class="o">=</span><span class="kc">None</span> <span class="c1"># karena teks kamu sudah bersih</span>
+<span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah dokumen: </span><span class="si">{</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, Jumlah kata unik: </span><span class="si">{</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Inisialisasi dan latih model LDA</span>
+<span class="n">n_topics</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">lda_model</span> <span class="o">=</span> <span class="n">LatentDirichletAllocation</span><span class="p">(</span>
+    <span class="n">n_components</span><span class="o">=</span><span class="n">n_topics</span><span class="p">,</span>
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
+    <span class="n">learning_method</span><span class="o">=</span><span class="s1">&#39;batch&#39;</span>
+<span class="p">)</span>
+
+<span class="n">lda_features</span> <span class="o">=</span> <span class="n">lda_model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>  <span class="c1"># menghasilkan distribusi topik untuk tiap dokumen</span>
+
+<span class="c1"># Konversi hasil LDA ke DataFrame</span>
+<span class="n">lda_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">lda_features</span><span class="p">,</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Topic_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_topics</span><span class="p">)]</span>
+<span class="p">)</span>
+
+<span class="c1"># Tambahkan kolom kategori supaya siap untuk klasifikasi</span>
+<span class="n">lda_df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Kategori&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">texts</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="s2">&quot;Kategori&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+
+<span class="c1"># Simpan ke CSV</span>
+<span class="n">lda_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;lda_result.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Ekstraksi fitur LDA berhasil disimpan sebagai lda_result.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># (Opsional) Tampilkan kata paling dominan di tiap topik</span>
+<span class="k">def</span> <span class="nf">print_top_words</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">feature_names</span><span class="p">,</span> <span class="n">n_top_words</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">topic_idx</span><span class="p">,</span> <span class="n">topic</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">components_</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🟩 Topik </span><span class="si">{</span><span class="n">topic_idx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">feature_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">topic</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[:</span><span class="o">-</span><span class="n">n_top_words</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]]))</span>
+
+<span class="n">print_top_words</span><span class="p">(</span><span class="n">lda_model</span><span class="p">,</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah dokumen: 100, Jumlah kata unik: 1342
+✅ Ekstraksi fitur LDA berhasil disimpan sebagai lda_result.csv
+
+🟩 Topik 1:
+latih anda ada indonesia para isi alat air pelatnas di
+
+🟩 Topik 2:
+hidup jelas di hanya yang milik kita sama cara bahasa
+
+🟩 Topik 3:
+air apa jakarta main pertama di proliga putri 2024 voli
+
+🟩 Topik 4:
+guna di alat milik orang temu cara itu hasil sehat
+
+🟩 Topik 5:
+suara motogp guna marquez balap musik bagnaia menang martin foto
+
+🟩 Topik 6:
+jauh guna balap apa salah ilmuwan langkah memang di temu
+
+🟩 Topik 7:
+lokasi kerja tempat di sehat media kontrak posisi wilayah apa
+
+🟩 Topik 8:
+guru 2024 didik guna di mata sistem itu apa ajar
+
+🟩 Topik 9:
+2025 januari air sekolah mudah kita bisa anak awal nomor
+
+🟩 Topik 10:
+barang pesawat buku air mahasiswa guna ada hidup sebab dapat
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -450,12 +543,21 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="tugass5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tugas 5</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="tugas1.html"
+       href="tugas5klaslda.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas 1</p>
+        <p class="prev-next-title">Tugas 5 | Klasifikasi - LDA</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -475,7 +577,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#daftar-isi">Daftar Isi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lda">LDA</a></li>
 </ul>
   </nav></div>
 
