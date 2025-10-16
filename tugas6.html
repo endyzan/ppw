@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tugas 1 | Crawling Springer Nature &#8212; Project PPW</title>
+    <title>Tugas 6 - UTS &#8212; Project PPW</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas1crawling';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas6';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas 2" href="tugas2.html" />
-    <link rel="prev" title="Tugas 1 | Pengantar Web Mining" href="tugas1pengantar.html" />
+    <link rel="next" title="Tugas 6 - UTS | Klasifikasi Berita - naïve bayes &amp; SVM" href="tugas6berita.html" />
+    <link rel="prev" title="Tugas 5 | Klasifikasi - LDA" href="tugas5klaslda.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -177,10 +177,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="tugas1.html">Tugas 1</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas1.html">Tugas 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="tugas1profile.html">Profile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas1pengantar.html">Pengantar</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Crawling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas1crawling.html">Crawling</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="tugas2.html">Tugas 2</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -200,7 +200,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tugas5klaslda.html">Klasifikasi - LDA</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tugas6.html">Tugas 6 UTS</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Tugas 6 UTS</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="tugas6berita.html">Klasifikasi - Berita</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas6email.html">Clustering - email</a></li>
 </ul>
@@ -276,7 +276,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas1crawling.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas6.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -306,7 +306,7 @@
       
       
       
-      <li><a href="_sources/tugas1crawling.ipynb" target="_blank"
+      <li><a href="_sources/tugas6.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -316,7 +316,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -377,9 +377,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -390,20 +388,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas 1 | Crawling Springer Nature</h1>
+    <h1>Tugas 6 - UTS</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library">Import Library</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-utama">code utama</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -413,218 +402,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-1-crawling-springer-nature">
-<h1>Tugas 1 | Crawling Springer Nature<a class="headerlink" href="#tugas-1-crawling-springer-nature" title="Link to this heading">#</a></h1>
-<p>Kode ini saya buat untuk melakukan crawling artikel dari Springer menggunakan <strong>RSS feed</strong> berdasarkan keyword tertentu (web mining, web usage mining, fraud detection). Hasil crawling berupa <strong>judul, link, ringkasan, dan tanggal</strong> publikasi artikel kemudian dikumpulkan dan disimpan ke dalam file CSV agar mudah dianalisis lebih lanjut.</p>
-<p>Berikut Code Crawling nya:</p>
-<section id="import-library">
-<h2>Import Library<a class="headerlink" href="#import-library" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="o">!{</span>sys.executable<span class="o">}</span><span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>feedparser<span class="w"> </span>pandas
-<span class="kn">import</span> <span class="nn">feedparser</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 25.1.1 -&gt; 25.2
-[notice] To update, run: python.exe -m pip install --upgrade pip
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting feedparser
-  Using cached feedparser-6.0.12-py3-none-any.whl.metadata (2.7 kB)
-Requirement already satisfied: pandas in c:\users\endyzan\appdata\local\programs\python\python313\lib\site-packages (2.3.2)
-Collecting sgmllib3k (from feedparser)
-  Using cached sgmllib3k-1.0.0.tar.gz (5.8 kB)
-  Installing build dependencies: started
-  Installing build dependencies: finished with status &#39;done&#39;
-  Getting requirements to build wheel: started
-  Getting requirements to build wheel: finished with status &#39;done&#39;
-  Preparing metadata (pyproject.toml): started
-  Preparing metadata (pyproject.toml): finished with status &#39;done&#39;
-Requirement already satisfied: numpy&gt;=1.26.0 in c:\users\endyzan\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2.3.2)
-Requirement already satisfied: python-dateutil&gt;=2.8.2 in c:\users\endyzan\appdata\roaming\python\python313\site-packages (from pandas) (2.9.0.post0)
-Requirement already satisfied: pytz&gt;=2020.1 in c:\users\endyzan\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2025.2)
-Requirement already satisfied: tzdata&gt;=2022.7 in c:\users\endyzan\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2025.2)
-Requirement already satisfied: six&gt;=1.5 in c:\users\endyzan\appdata\roaming\python\python313\site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.17.0)
-Using cached feedparser-6.0.12-py3-none-any.whl (81 kB)
-Building wheels for collected packages: sgmllib3k
-  Building wheel for sgmllib3k (pyproject.toml): started
-  Building wheel for sgmllib3k (pyproject.toml): finished with status &#39;done&#39;
-  Created wheel for sgmllib3k: filename=sgmllib3k-1.0.0-py3-none-any.whl size=6105 sha256=0cbc13d714b203deb28184134ad3a158523b6d9a6152f8be8df469639ebb46a4
-  Stored in directory: c:\users\endyzan\appdata\local\pip\cache\wheels\3d\4d\ef\37cdccc18d6fd7e0dd7817dcdf9146d4d6789c32a227a28134
-Successfully built sgmllib3k
-Installing collected packages: sgmllib3k, feedparser
-
-   -------------------- ------------------- 1/2 [feedparser]
-   -------------------- ------------------- 1/2 [feedparser]
-   -------------------- ------------------- 1/2 [feedparser]
-   -------------------- ------------------- 1/2 [feedparser]
-   ---------------------------------------- 2/2 [feedparser]
-
-Successfully installed feedparser-6.0.12 sgmllib3k-1.0.0
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="code-utama">
-<h2>code utama<a class="headerlink" href="#code-utama" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-6-uts">
+<h1>Tugas 6 - UTS<a class="headerlink" href="#tugas-6-uts" title="Link to this heading">#</a></h1>
+<p>Pada tugas 6 atau UTS kali ini terdapat 2 proyek yaitu:</p>
 <ul class="simple">
-<li><p>Mencari artikel di Springer berdasarkan beberapa keyword.</p></li>
-<li><p>Mengambil data artikel dari RSS feed (judul, link, ringkasan, tanggal publikasi).</p></li>
-<li><p>Mengumpulkan semua hasil ke dalam satu DataFrame pandas.</p></li>
-<li><p>Menyimpan hasil crawling ke file CSV.</p></li>
+<li><p><a class="reference internal" href="tugas6berita.html"><span class="std std-doc">Klasifikasi Berita - naïve bayes &amp; SVM</span></a></p></li>
+<li><p><a class="reference internal" href="tugas6email.html"><span class="std std-doc">Clustering Email</span></a></p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Daftar keyword</span>
-<span class="n">keywords</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;web mining&quot;</span><span class="p">,</span> <span class="s2">&quot;web usage mining&quot;</span><span class="p">,</span> <span class="s2">&quot;fraud detection&quot;</span><span class="p">]</span>
-<span class="n">all_results</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">kw</span> <span class="ow">in</span> <span class="n">keywords</span><span class="p">:</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://link.springer.com/search.rss?query=</span><span class="si">{</span><span class="n">kw</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;+&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] Ambil RSS untuk: </span><span class="si">{</span><span class="n">kw</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">feed</span> <span class="o">=</span> <span class="n">feedparser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-    
-    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">feed</span><span class="o">.</span><span class="n">entries</span><span class="p">:</span>
-        <span class="n">all_results</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-            <span class="s2">&quot;keyword&quot;</span><span class="p">:</span> <span class="n">kw</span><span class="p">,</span>
-            <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">entry</span><span class="o">.</span><span class="n">title</span><span class="p">,</span>
-            <span class="s2">&quot;link&quot;</span><span class="p">:</span> <span class="n">entry</span><span class="o">.</span><span class="n">link</span><span class="p">,</span>
-            <span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="n">entry</span><span class="o">.</span><span class="n">summary</span> <span class="k">if</span> <span class="s2">&quot;summary&quot;</span> <span class="ow">in</span> <span class="n">entry</span> <span class="k">else</span> <span class="s2">&quot;No summary&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;pubDate&quot;</span><span class="p">:</span> <span class="n">entry</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;published&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-        <span class="p">})</span>
-
-<span class="c1"># Simpan ke CSV</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">all_results</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;springer_rss_results.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[INFO] Data berhasil disimpan ke springer_rss_results.csv&quot;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># preview 10 baris pertama dengan tampilan tabel pandas</span>
-</pre></div>
+<div class="toctree-wrapper compound">
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[INFO] Ambil RSS untuk: web mining
-[INFO] Ambil RSS untuk: web usage mining
-[INFO] Ambil RSS untuk: fraud detection
-[INFO] Data berhasil disimpan ke springer_rss_results.csv
-</pre></div>
-</div>
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>keyword</th>
-      <th>title</th>
-      <th>link</th>
-      <th>summary</th>
-      <th>pubDate</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>web mining</td>
-      <td>The Pragmatics of Legal Argumentation</td>
-      <td>https://link.springer.com/collections/cdccbggbfi</td>
-      <td>&lt;p&gt;Paper submissions are invited for the speci...</td>
-      <td>2026-09-15</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>web mining</td>
-      <td>Advances in String Processing and Information ...</td>
-      <td>https://link.springer.com/collections/bjeffdaeef</td>
-      <td>&lt;p&gt;We are seeking submissions for a topical co...</td>
-      <td>2026-02-01</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>web mining</td>
-      <td>Synthesis Lectures on Data Mining and Knowledg...</td>
-      <td>https://link.springer.com/series/16963</td>
-      <td>The series focuses on topics pertaining to dat...</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>web mining</td>
-      <td>Apply TF-IDF and LDA to Explore Topics and Rel...</td>
-      <td>https://link.springer.com/chapter/10.1007/978-...</td>
-      <td>As the importance of Electric Vehicles (EVs) i...</td>
-      <td>2026-01-01</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>web mining</td>
-      <td>VR-SBOM: Visualization of Software Bill of Mat...</td>
-      <td>https://link.springer.com/chapter/10.1007/978-...</td>
-      <td>As software capabilities increase and are deli...</td>
-      <td>2026-01-01</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>web mining</td>
-      <td>Adaptive Convex Spherical Structure Detection ...</td>
-      <td>https://link.springer.com/chapter/10.1007/978-...</td>
-      <td>Semi-supervised feature extraction has emerged...</td>
-      <td>2026-01-01</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>web mining</td>
-      <td>TransTraffic: Transformer-Based Encrypted Traf...</td>
-      <td>https://link.springer.com/chapter/10.1007/978-...</td>
-      <td>The Industrial control systems are widely used...</td>
-      <td>2026-01-01</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>web mining</td>
-      <td>Discovering Organizational Models</td>
-      <td>https://link.springer.com/chapter/10.1007/978-...</td>
-      <td>In the OrdinoR framework for organizational mo...</td>
-      <td>2026-01-01</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>web mining</td>
-      <td>Predicting Diseases from Symptoms Using Machin...</td>
-      <td>https://link.springer.com/chapter/10.1007/978-...</td>
-      <td>This project aims to develop an advanced machi...</td>
-      <td>2026-01-01</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>web mining</td>
-      <td>Exploring the Ethical and Social Impact of Art...</td>
-      <td>https://link.springer.com/chapter/10.1007/978-...</td>
-      <td>Artificial intelligence (AI) is fundamentally ...</td>
-      <td>2026-01-01</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -658,20 +444,20 @@ Successfully installed feedparser-6.0.12 sgmllib3k-1.0.0
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="tugas1pengantar.html"
+       href="tugas5klaslda.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tugas 1 | Pengantar Web Mining</p>
+        <p class="prev-next-title">Tugas 5 | Klasifikasi - LDA</p>
       </div>
     </a>
     <a class="right-next"
-       href="tugas2.html"
+       href="tugas6berita.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas 2</p>
+        <p class="prev-next-title">Tugas 6 - UTS | Klasifikasi Berita - naïve bayes &amp; SVM</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -682,21 +468,7 @@ Successfully installed feedparser-6.0.12 sgmllib3k-1.0.0
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library">Import Library</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-utama">code utama</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
+                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>
