@@ -10,3 +10,4 @@ Repositori Tugas PPW dari awal pertemuan sampai akhir pertemuan.
 - [Tugas 4](tugas4.md)
 - [Tugas 5](tugass5.md)
 - [Tugas 6 UTS](tugas6.md)
+- [Tugas 7 PageRank](tugas7.md)

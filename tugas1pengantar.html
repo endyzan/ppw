@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -41,9 +41,9 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=2b91c5f0"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -55,8 +55,6 @@
     <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas1pengantar';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -205,7 +203,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tugas6email.html">Clustering - email</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tugas7.html">Tugas 7 - PageRank</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas7.html">Tugas 7 PageRank</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="tugas7webgoogle.html">Analisis Dataset web-google</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas7berita.html">Analisis Dataset uts_berita</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas7email.html">Analisis Dataset uts_email</a></li>
@@ -436,16 +434,14 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tugas-1-pengantar-web-mining">
-<h1>Tugas 1 | Pengantar Web Mining<a class="headerlink" href="#tugas-1-pengantar-web-mining" title="Link to this heading">#</a></h1>
-<hr class="docutils" />
+<h1>Tugas 1 | Pengantar Web Mining<a class="headerlink" href="#tugas-1-pengantar-web-mining" title="Permalink to this heading">#</a></h1>
 <section id="pendahuluan">
-<h2>1. Pendahuluan<a class="headerlink" href="#pendahuluan" title="Link to this heading">#</a></h2>
+<h2>1. Pendahuluan<a class="headerlink" href="#pendahuluan" title="Permalink to this heading">#</a></h2>
 <p>Di era digital saat ini, internet bukan lagi sekadar media komunikasi, melainkan juga gudang data raksasa yang terus bertambah setiap detik. Jutaan website aktif menyimpan informasi dalam berbagai bentuk: teks, gambar, video, maupun data terstruktur. Namun, besarnya volume data web justru menimbulkan tantangan baru: bagaimana cara menggali pengetahuan yang bermanfaat dari lautan data tersebut? Di sinilah <strong>Web Mining</strong> berperan.</p>
 <p><strong>Web Mining</strong> atau penambangan web adalah cabang dari data mining yang secara khusus berfokus pada ekstraksi informasi, penemuan pola, dan penggalian pengetahuan dari data berbasis web. Konsep ini menggabungkan berbagai disiplin ilmu seperti <em>machine learning, natural language processing, database systems,</em> dan <em>analisis jaringan sosial</em>. Hasil dari Web Mining dapat dimanfaatkan untuk berbagai tujuan, mulai dari sistem rekomendasi produk, analisis perilaku pengguna, deteksi tren, hingga optimasi mesin pencari.</p>
 </section>
-<hr class="docutils" />
 <section id="definisi-web-mining">
-<h2>2. Definisi Web Mining<a class="headerlink" href="#definisi-web-mining" title="Link to this heading">#</a></h2>
+<h2>2. Definisi Web Mining<a class="headerlink" href="#definisi-web-mining" title="Permalink to this heading">#</a></h2>
 <p>Secara sederhana, Web Mining dapat didefinisikan sebagai proses <strong>menemukan pola dan pengetahuan yang tersembunyi dari data web</strong>.</p>
 <ul class="simple">
 <li><p>Menurut <em>Etzioni (1996)</em>: Web Mining adalah penggunaan teknik penambangan data untuk secara otomatis menemukan serta mengekstrak informasi dari layanan web.</p></li>
@@ -453,9 +449,8 @@ document.write(`
 </ul>
 <p>Dengan kata lain, Web Mining tidak hanya sekadar membaca data web, tetapi juga memahami <strong>makna, keterkaitan, dan tren</strong> yang terkandung di dalamnya.</p>
 </section>
-<hr class="docutils" />
 <section id="tantangan-dalam-web-mining">
-<h2>3. Tantangan dalam Web Mining<a class="headerlink" href="#tantangan-dalam-web-mining" title="Link to this heading">#</a></h2>
+<h2>3. Tantangan dalam Web Mining<a class="headerlink" href="#tantangan-dalam-web-mining" title="Permalink to this heading">#</a></h2>
 <p>Meskipun potensinya besar, Web Mining menghadapi banyak tantangan:</p>
 <ul class="simple">
 <li><p><strong>Skala Data yang Besar</strong> – Web berisi miliaran halaman dan terus berkembang setiap saat.</p></li>
@@ -465,13 +460,12 @@ document.write(`
 </ul>
 <p>Karena itulah, dibutuhkan teknik pengolahan data yang cerdas, fleksibel, dan efisien agar hasil Web Mining benar-benar bermanfaat.</p>
 </section>
-<hr class="docutils" />
 <section id="taksonomi-web-mining">
-<h2>4. Taksonomi Web Mining<a class="headerlink" href="#taksonomi-web-mining" title="Link to this heading">#</a></h2>
+<h2>4. Taksonomi Web Mining<a class="headerlink" href="#taksonomi-web-mining" title="Permalink to this heading">#</a></h2>
 <p><img alt="Taksonomi" src="_static/taksonomi.png" /></p>
 <p>Secara garis besar, Web Mining terbagi menjadi tiga bidang utama:</p>
 <section id="web-content-mining">
-<h3>🔹 Web Content Mining<a class="headerlink" href="#web-content-mining" title="Link to this heading">#</a></h3>
+<h3>🔹 Web Content Mining<a class="headerlink" href="#web-content-mining" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Fokus</strong>: konten halaman web.</p></li>
 <li><p><strong>Bentuk data</strong>: teks, gambar, audio, video, tabel, atau metadata.</p></li>
@@ -479,14 +473,14 @@ document.write(`
 </ul>
 </section>
 <section id="web-structure-mining">
-<h3>🔹 Web Structure Mining<a class="headerlink" href="#web-structure-mining" title="Link to this heading">#</a></h3>
+<h3>🔹 Web Structure Mining<a class="headerlink" href="#web-structure-mining" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Fokus</strong>: struktur hyperlink dan keterkaitan antarhalaman.</p></li>
 <li><p><strong>Tujuan</strong>: menemukan otoritas halaman (contoh: PageRank Google), deteksi komunitas dalam jaringan sosial, atau analisis hubungan antar pengguna.</p></li>
 </ul>
 </section>
 <section id="web-usage-mining">
-<h3>🔹 Web Usage Mining<a class="headerlink" href="#web-usage-mining" title="Link to this heading">#</a></h3>
+<h3>🔹 Web Usage Mining<a class="headerlink" href="#web-usage-mining" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Fokus</strong>: perilaku pengguna saat berinteraksi dengan website.</p></li>
 <li><p><strong>Data</strong>: log server, clickstream, cookie, metadata akses.</p></li>
@@ -495,20 +489,19 @@ document.write(`
 <p>Ketiga bidang ini saling melengkapi. Misalnya, konten dapat digali untuk menemukan topik, struktur untuk mengetahui hubungan antar sumber, dan penggunaan untuk memahami preferensi pengguna.</p>
 </section>
 </section>
-<hr class="docutils" />
 <section id="proses-web-mining">
-<h2>5. Proses Web Mining<a class="headerlink" href="#proses-web-mining" title="Link to this heading">#</a></h2>
+<h2>5. Proses Web Mining<a class="headerlink" href="#proses-web-mining" title="Permalink to this heading">#</a></h2>
 <p><img alt="Taksonomi" src="_static/proseswebmining.png" /></p>
 <p>Seperti halnya data mining, Web Mining juga melalui beberapa tahapan utama:</p>
 <section id="data-gathering-exploration">
-<h3>🔸 Data Gathering &amp; Exploration<a class="headerlink" href="#data-gathering-exploration" title="Link to this heading">#</a></h3>
+<h3>🔸 Data Gathering &amp; Exploration<a class="headerlink" href="#data-gathering-exploration" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Mengumpulkan data dari web dengan <em>web crawling</em> atau API.</p></li>
 <li><p>Mengeksplorasi data untuk memahami karakteristik awalnya.</p></li>
 </ul>
 </section>
 <section id="preprocessing-transformation">
-<h3>🔸 Preprocessing &amp; Transformation<a class="headerlink" href="#preprocessing-transformation" title="Link to this heading">#</a></h3>
+<h3>🔸 Preprocessing &amp; Transformation<a class="headerlink" href="#preprocessing-transformation" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Membersihkan data dari noise.</p></li>
 <li><p>Transformasi teks menjadi vektor atau embedding.</p></li>
@@ -517,23 +510,22 @@ document.write(`
 </ul>
 </section>
 <section id="actual-data-mining">
-<h3>🔸 Actual Data Mining<a class="headerlink" href="#actual-data-mining" title="Link to this heading">#</a></h3>
+<h3>🔸 Actual Data Mining<a class="headerlink" href="#actual-data-mining" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Menerapkan algoritma <em>machine learning</em> (supervised, unsupervised, atau deep learning).</p></li>
 <li><p>Menghasilkan model, pola, atau pengetahuan dari data.</p></li>
 </ul>
 </section>
 <section id="evaluation-deployment">
-<h3>🔸 Evaluation &amp; Deployment<a class="headerlink" href="#evaluation-deployment" title="Link to this heading">#</a></h3>
+<h3>🔸 Evaluation &amp; Deployment<a class="headerlink" href="#evaluation-deployment" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Mengevaluasi kualitas model dengan metrik tertentu.</p></li>
 <li><p>Mengimplementasikan hasil ke sistem nyata seperti mesin rekomendasi, search engine, atau dashboard analitik.</p></li>
 </ul>
 </section>
 </section>
-<hr class="docutils" />
 <section id="contoh-aplikasi-nyata">
-<h2>6. Contoh Aplikasi Nyata<a class="headerlink" href="#contoh-aplikasi-nyata" title="Link to this heading">#</a></h2>
+<h2>6. Contoh Aplikasi Nyata<a class="headerlink" href="#contoh-aplikasi-nyata" title="Permalink to this heading">#</a></h2>
 <p>Beberapa contoh penerapan Web Mining dalam kehidupan sehari-hari:</p>
 <ul class="simple">
 <li><p><strong>Google Search</strong> → menggunakan algoritma <em>PageRank</em> (Web Structure Mining).</p></li>
@@ -542,9 +534,8 @@ document.write(`
 <li><p><strong>Deteksi Komunitas di Jaringan Sosial</strong> → memetakan kelompok pengguna dengan interaksi intensif (Web Structure Mining).</p></li>
 </ul>
 </section>
-<hr class="docutils" />
 <section id="penutup">
-<h2>7. Penutup<a class="headerlink" href="#penutup" title="Link to this heading">#</a></h2>
+<h2>7. Penutup<a class="headerlink" href="#penutup" title="Permalink to this heading">#</a></h2>
 <p>Web Mining adalah jembatan antara data masif di internet dengan kebutuhan informasi yang lebih bermakna. Dengan memahami konten, struktur, dan pola penggunaan web, para peneliti maupun praktisi dapat menghadirkan solusi cerdas dalam berbagai bidang seperti bisnis, pemerintahan, pendidikan, maupun kesehatan.</p>
 <p>Seiring perkembangan teknologi seperti <strong>big data, machine learning, dan artificial intelligence</strong>, peran Web Mining akan semakin krusial dalam mengubah data mentah menjadi pengetahuan yang bernilai.</p>
 <blockquote>

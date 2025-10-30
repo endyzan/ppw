@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -41,9 +41,9 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=2b91c5f0"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -55,8 +55,6 @@
     <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas2crwpta';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -205,7 +203,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tugas6email.html">Clustering - email</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tugas7.html">Tugas 7 - PageRank</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas7.html">Tugas 7 PageRank</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="tugas7webgoogle.html">Analisis Dataset web-google</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas7berita.html">Analisis Dataset uts_berita</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas7email.html">Analisis Dataset uts_email</a></li>
@@ -420,9 +418,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tugas-2-crawling-pta-trunojoyo-ac-id">
-<h1>Tugas 2 | Crawling <a class="reference external" href="http://pta.trunojoyo.ac.id">pta.trunojoyo.ac.id</a><a class="headerlink" href="#tugas-2-crawling-pta-trunojoyo-ac-id" title="Link to this heading">#</a></h1>
+<h1>Tugas 2 | Crawling <a class="reference external" href="http://pta.trunojoyo.ac.id">pta.trunojoyo.ac.id</a><a class="headerlink" href="#tugas-2-crawling-pta-trunojoyo-ac-id" title="Permalink to this heading">#</a></h1>
 <section id="versi-pertama-ptaa">
-<h2>Versi Pertama (ptaa())<a class="headerlink" href="#versi-pertama-ptaa" title="Link to this heading">#</a></h2>
+<h2>Versi Pertama (ptaa())<a class="headerlink" href="#versi-pertama-ptaa" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Loop halaman terbatas
 Hanya mengambil 3 halaman pertama (for i in range(1, 4)).</p></li>
@@ -435,11 +433,11 @@ Setiap link jurnal dibuka bergantian, tidak ada paralelisasi.</p></li>
 <p><strong>Import Library</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span>
-<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">beautifulsoup4</span>
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!pip install requests
+!pip install beautifulsoup4
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
 </pre></div>
 </div>
 </div>
@@ -463,7 +461,7 @@ Requirement already satisfied: typing-extensions&gt;=4.0.0 in /usr/local/lib/pyt
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ptaa</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">ptaa</span><span class="p">():</span>
     <span class="c1"># siapkan struktur data untuk menyimpan hasil</span>
     <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;penulis&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;judul&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;pembimbing_pertama&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;pembimbing_kedua&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;abstrak&quot;</span><span class="p">:</span> <span class="p">[]}</span>
 
@@ -888,7 +886,7 @@ Requirement already satisfied: typing-extensions&gt;=4.0.0 in /usr/local/lib/pyt
 </div>
 </section>
 <section id="versi-kedua-ptaa-multithreaded">
-<h2>Versi Kedua (ptaa_multithreaded())<a class="headerlink" href="#versi-kedua-ptaa-multithreaded" title="Link to this heading">#</a></h2>
+<h2>Versi Kedua (ptaa_multithreaded())<a class="headerlink" href="#versi-kedua-ptaa-multithreaded" title="Permalink to this heading">#</a></h2>
 <ul>
 <li><p>Loop otomatis semua halaman</p>
 <p>Jalan terus sampai halaman terakhir (tidak ada batasan manual 1–3).</p>
@@ -906,11 +904,11 @@ Requirement already satisfied: typing-extensions&gt;=4.0.0 in /usr/local/lib/pyt
 <p><strong>Import Library</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">from</span> <span class="nn">concurrent.futures</span> <span class="kn">import</span> <span class="n">ThreadPoolExecutor</span><span class="p">,</span> <span class="n">as_completed</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">concurrent.futures</span><span class="w"> </span><span class="kn">import</span> <span class="n">ThreadPoolExecutor</span><span class="p">,</span> <span class="n">as_completed</span>
 </pre></div>
 </div>
 </div>
@@ -920,7 +918,7 @@ Requirement already satisfied: typing-extensions&gt;=4.0.0 in /usr/local/lib/pyt
 <p>Output: dict (penulis, judul, pembimbing, abstrak)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">crawl_detail</span><span class="p">(</span><span class="n">link</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">crawl_detail</span><span class="p">(</span><span class="n">link</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
         <span class="n">soup1</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
@@ -958,7 +956,7 @@ Requirement already satisfied: typing-extensions&gt;=4.0.0 in /usr/local/lib/pyt
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ptaa_multithreaded</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">ptaa_multithreaded</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
     <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">page</span> <span class="o">=</span> <span class="mi">1</span>
 

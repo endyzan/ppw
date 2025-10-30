@@ -1,6 +1,6 @@
 # Tugas 1 | Pengantar Web Mining
 
----
+
 
 ## 1. Pendahuluan
 
@@ -8,7 +8,7 @@ Di era digital saat ini, internet bukan lagi sekadar media komunikasi, melainkan
 
 **Web Mining** atau penambangan web adalah cabang dari data mining yang secara khusus berfokus pada ekstraksi informasi, penemuan pola, dan penggalian pengetahuan dari data berbasis web. Konsep ini menggabungkan berbagai disiplin ilmu seperti *machine learning, natural language processing, database systems,* dan *analisis jaringan sosial*. Hasil dari Web Mining dapat dimanfaatkan untuk berbagai tujuan, mulai dari sistem rekomendasi produk, analisis perilaku pengguna, deteksi tren, hingga optimasi mesin pencari.
 
----
+
 
 ## 2. Definisi Web Mining
 
@@ -19,7 +19,7 @@ Secara sederhana, Web Mining dapat didefinisikan sebagai proses **menemukan pola
 
 Dengan kata lain, Web Mining tidak hanya sekadar membaca data web, tetapi juga memahami **makna, keterkaitan, dan tren** yang terkandung di dalamnya.
 
----
+
 
 ## 3. Tantangan dalam Web Mining
 
@@ -32,7 +32,7 @@ Meskipun potensinya besar, Web Mining menghadapi banyak tantangan:
 
 Karena itulah, dibutuhkan teknik pengolahan data yang cerdas, fleksibel, dan efisien agar hasil Web Mining benar-benar bermanfaat.
 
----
+
 
 ## 4. Taksonomi Web Mining
 
@@ -56,7 +56,7 @@ Secara garis besar, Web Mining terbagi menjadi tiga bidang utama:
 
 Ketiga bidang ini saling melengkapi. Misalnya, konten dapat digali untuk menemukan topik, struktur untuk mengetahui hubungan antar sumber, dan penggunaan untuk memahami preferensi pengguna.
 
----
+
 
 ## 5. Proses Web Mining
 
@@ -82,7 +82,7 @@ Seperti halnya data mining, Web Mining juga melalui beberapa tahapan utama:
 - Mengevaluasi kualitas model dengan metrik tertentu.  
 - Mengimplementasikan hasil ke sistem nyata seperti mesin rekomendasi, search engine, atau dashboard analitik.  
 
----
+
 
 ## 6. Contoh Aplikasi Nyata
 
@@ -93,7 +93,7 @@ Beberapa contoh penerapan Web Mining dalam kehidupan sehari-hari:
 - **Analisis Sentimen Media Sosial** → memantau opini publik terhadap isu tertentu (Web Content Mining).  
 - **Deteksi Komunitas di Jaringan Sosial** → memetakan kelompok pengguna dengan interaksi intensif (Web Structure Mining).  
 
----
+
 
 ## 7. Penutup
 

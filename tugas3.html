@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -41,9 +41,9 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=2b91c5f0"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -55,8 +55,6 @@
     <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas3';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -205,7 +203,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tugas6email.html">Clustering - email</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tugas7.html">Tugas 7 - PageRank</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas7.html">Tugas 7 PageRank</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="tugas7webgoogle.html">Analisis Dataset web-google</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas7berita.html">Analisis Dataset uts_berita</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas7email.html">Analisis Dataset uts_email</a></li>
@@ -455,28 +453,28 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tugas-3-preprocessing">
-<h1>Tugas 3 | Preprocessing<a class="headerlink" href="#tugas-3-preprocessing" title="Link to this heading">#</a></h1>
+<h1>Tugas 3 | Preprocessing<a class="headerlink" href="#tugas-3-preprocessing" title="Permalink to this heading">#</a></h1>
 <p>Tugas 3 ini tujuannya untuk Preprocessing:</p>
 <p>Dataset: detik_berita_2024.csv &amp; pta_mulitT_full.csv</p>
 <p>Tahapan: hapus stopwords -&gt; hapus simbol -&gt; spellcheck
 -&gt; stemming -&gt; tokenisasi -&gt; simpan hasil ke CSV</p>
 <section id="install-library-yang-digunakan">
-<h2>Install library yang digunakan<a class="headerlink" href="#install-library-yang-digunakan" title="Link to this heading">#</a></h2>
+<h2>Install library yang digunakan<a class="headerlink" href="#install-library-yang-digunakan" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="o">!{</span>sys.executable<span class="o">}</span><span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>sastrawi
 <span class="o">!{</span>sys.executable<span class="o">}</span><span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pyspellchecker<span class="w"> </span>
 <span class="o">!{</span>sys.executable<span class="o">}</span><span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>regex
 <span class="o">!{</span>sys.executable<span class="o">}</span><span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>nltk
 
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
-<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
-<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
-<span class="kn">from</span> <span class="nn">spellchecker</span> <span class="kn">import</span> <span class="n">SpellChecker</span>
-<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Sastrawi.Stemmer.StemmerFactory</span><span class="w"> </span><span class="kn">import</span> <span class="n">StemmerFactory</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.tokenize</span><span class="w"> </span><span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spellchecker</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpellChecker</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
 </pre></div>
 </div>
 </div>
@@ -518,7 +516,7 @@ Requirement already satisfied: colorama in c:\users\endyzan\appdata\roaming\pyth
 </div>
 </section>
 <section id="load-dataset">
-<h2>Load Dataset<a class="headerlink" href="#load-dataset" title="Link to this heading">#</a></h2>
+<h2>Load Dataset<a class="headerlink" href="#load-dataset" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>detik_berita_2024.csv  -&gt; berisi berita hasil crawling dari portal <a class="reference external" href="http://Detik.com">Detik.com</a></p></li>
 <li><p>pta_mulitT_full.csv    -&gt; berisi abstrak skripsi dari repository PTA Trunojoyo</p></li>
@@ -585,7 +583,7 @@ PTA shape: (2286, 5)
 </div>
 </section>
 <section id="stopword">
-<h2>Stopword<a class="headerlink" href="#stopword" title="Link to this heading">#</a></h2>
+<h2>Stopword<a class="headerlink" href="#stopword" title="Permalink to this heading">#</a></h2>
 <p>Menghapus <em>stopwords</em> (kata-kata umum seperti “yang”, “dan”, “di”) karena biasanya tidak menambah makna signifikan.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -594,7 +592,7 @@ PTA shape: (2286, 5)
 <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt_tab&#39;</span><span class="p">)</span>
 <span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">))</span>
 
-<span class="k">def</span> <span class="nf">remove_stopwords</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">remove_stopwords</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="n">tokens</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
     <span class="n">filtered</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
     <span class="k">return</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">filtered</span><span class="p">)</span>
@@ -619,9 +617,9 @@ PTA shape: (2286, 5)
 </div>
 </div>
 <section id="hasil-stopword">
-<h3>Hasil Stopword<a class="headerlink" href="#hasil-stopword" title="Link to this heading">#</a></h3>
+<h3>Hasil Stopword<a class="headerlink" href="#hasil-stopword" title="Permalink to this heading">#</a></h3>
 <section id="berita">
-<h4>berita<a class="headerlink" href="#berita" title="Link to this heading">#</a></h4>
+<h4>berita<a class="headerlink" href="#berita" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">detik</span><span class="p">[[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_stopword&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -683,7 +681,7 @@ PTA shape: (2286, 5)
 </div>
 </section>
 <section id="pta-trunojoyo-ac-id">
-<h4><a class="reference external" href="http://pta.trunojoyo.ac.id">pta.trunojoyo.ac.id</a><a class="headerlink" href="#pta-trunojoyo-ac-id" title="Link to this heading">#</a></h4>
+<h4><a class="reference external" href="http://pta.trunojoyo.ac.id">pta.trunojoyo.ac.id</a><a class="headerlink" href="#pta-trunojoyo-ac-id" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pta</span><span class="p">[[</span><span class="s2">&quot;abstrak&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_stopword&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -747,11 +745,11 @@ PTA shape: (2286, 5)
 </section>
 </section>
 <section id="menghilangkan-symbol-tanda-baca">
-<h2>Menghilangkan Symbol/Tanda Baca<a class="headerlink" href="#menghilangkan-symbol-tanda-baca" title="Link to this heading">#</a></h2>
+<h2>Menghilangkan Symbol/Tanda Baca<a class="headerlink" href="#menghilangkan-symbol-tanda-baca" title="Permalink to this heading">#</a></h2>
 <p>Menghapus simbol/tanda baca agar teks hanya berisi huruf dan angka.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remove_symbols</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">remove_symbols</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^A-Za-z0-9\s]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
 
 <span class="n">detik</span><span class="p">[</span><span class="s2">&quot;clean_no_symbol&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">detik</span><span class="p">[</span><span class="s2">&quot;clean_no_stopword&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_symbols</span><span class="p">)</span>
@@ -761,9 +759,9 @@ PTA shape: (2286, 5)
 </div>
 </div>
 <section id="hasil-menghilangkan-symbol-tanda-baca">
-<h3>Hasil menghilangkan Symbol/tanda baca<a class="headerlink" href="#hasil-menghilangkan-symbol-tanda-baca" title="Link to this heading">#</a></h3>
+<h3>Hasil menghilangkan Symbol/tanda baca<a class="headerlink" href="#hasil-menghilangkan-symbol-tanda-baca" title="Permalink to this heading">#</a></h3>
 <section id="id1">
-<h4>berita<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<h4>berita<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">detik</span><span class="p">[[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_stopword&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_symbol&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -831,7 +829,7 @@ PTA shape: (2286, 5)
 </div>
 </section>
 <section id="id2">
-<h4><a class="reference external" href="http://pta.trunojoyo.ac.id">pta.trunojoyo.ac.id</a><a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<h4><a class="reference external" href="http://pta.trunojoyo.ac.id">pta.trunojoyo.ac.id</a><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pta</span><span class="p">[[</span><span class="s2">&quot;abstrak&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_stopword&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_symbol&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -900,13 +898,13 @@ PTA shape: (2286, 5)
 </section>
 </section>
 <section id="cek-ejaan-pembukaan-kata">
-<h3>Cek Ejaan &amp; Pembukaan Kata<a class="headerlink" href="#cek-ejaan-pembukaan-kata" title="Link to this heading">#</a></h3>
+<h3>Cek Ejaan &amp; Pembukaan Kata<a class="headerlink" href="#cek-ejaan-pembukaan-kata" title="Permalink to this heading">#</a></h3>
 <p>Melakukan <em>spell checking</em> untuk memperbaiki kesalahan ejaan
 dengan bantuan kamus bahasa Indonesia.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spellchecker</span> <span class="kn">import</span> <span class="n">SpellChecker</span>
-<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">spellchecker</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpellChecker</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
 
 <span class="c1"># aktifkan tqdm untuk pandas</span>
 <span class="n">tqdm</span><span class="o">.</span><span class="n">pandas</span><span class="p">()</span>
@@ -916,7 +914,7 @@ dengan bantuan kamus bahasa Indonesia.</p>
 
 <span class="n">cache</span> <span class="o">=</span> <span class="p">{}</span>
 
-<span class="k">def</span> <span class="nf">correct_spelling</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">correct_spelling</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="n">corrected</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
         <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">cache</span><span class="p">:</span>
@@ -942,9 +940,9 @@ dengan bantuan kamus bahasa Indonesia.</p>
 </div>
 </section>
 <section id="hasil-spell-checking">
-<h3>hasil spell checking<a class="headerlink" href="#hasil-spell-checking" title="Link to this heading">#</a></h3>
+<h3>hasil spell checking<a class="headerlink" href="#hasil-spell-checking" title="Permalink to this heading">#</a></h3>
 <section id="id3">
-<h4>berita<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<h4>berita<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">detik</span><span class="p">[[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_stopword&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_symbol&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_spellcheck&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -1018,7 +1016,7 @@ dengan bantuan kamus bahasa Indonesia.</p>
 </div>
 </section>
 <section id="id4">
-<h4><a class="reference external" href="http://pta.trunojoyo.ac.id">pta.trunojoyo.ac.id</a><a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<h4><a class="reference external" href="http://pta.trunojoyo.ac.id">pta.trunojoyo.ac.id</a><a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pta</span><span class="p">[[</span><span class="s2">&quot;abstrak&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_stopword&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_symbol&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_spellcheck&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -1093,7 +1091,7 @@ dengan bantuan kamus bahasa Indonesia.</p>
 </section>
 </section>
 <section id="stemming">
-<h3>Stemming<a class="headerlink" href="#stemming" title="Link to this heading">#</a></h3>
+<h3>Stemming<a class="headerlink" href="#stemming" title="Permalink to this heading">#</a></h3>
 <p>Melakukan <em>stemming</em> untuk mengubah kata ke bentuk dasarnya,
 misalnya “berlari” -&gt; “lari”, “mengajar” -&gt; “ajar”.</p>
 <div class="cell docutils container">
@@ -1101,7 +1099,7 @@ misalnya “berlari” -&gt; “lari”, “mengajar” -&gt; “ajar”.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factory</span> <span class="o">=</span> <span class="n">StemmerFactory</span><span class="p">()</span>
 <span class="n">stemmer</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create_stemmer</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">stemming_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">stemming_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
 
 <span class="n">detik</span><span class="p">[</span><span class="s2">&quot;clean_stemmed&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">detik</span><span class="p">[</span><span class="s2">&quot;clean_spellcheck&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stemming_text</span><span class="p">)</span>
@@ -1112,9 +1110,9 @@ misalnya “berlari” -&gt; “lari”, “mengajar” -&gt; “ajar”.</p>
 </div>
 </section>
 <section id="hasil-stemming">
-<h3>hasil stemming<a class="headerlink" href="#hasil-stemming" title="Link to this heading">#</a></h3>
+<h3>hasil stemming<a class="headerlink" href="#hasil-stemming" title="Permalink to this heading">#</a></h3>
 <section id="id5">
-<h4>berita<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<h4>berita<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">detik</span><span class="p">[[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_stopword&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_symbol&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_spellcheck&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_stemmed&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -1194,7 +1192,7 @@ misalnya “berlari” -&gt; “lari”, “mengajar” -&gt; “ajar”.</p>
 </div>
 </section>
 <section id="pta-tunojoyo-ac-id">
-<h4><a class="reference external" href="http://pta.tunojoyo.ac.id">pta.tunojoyo.ac.id</a><a class="headerlink" href="#pta-tunojoyo-ac-id" title="Link to this heading">#</a></h4>
+<h4><a class="reference external" href="http://pta.tunojoyo.ac.id">pta.tunojoyo.ac.id</a><a class="headerlink" href="#pta-tunojoyo-ac-id" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pta</span><span class="p">[[</span><span class="s2">&quot;abstrak&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_stopword&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_symbol&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_spellcheck&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_stemmed&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -1275,11 +1273,11 @@ misalnya “berlari” -&gt; “lari”, “mengajar” -&gt; “ajar”.</p>
 </section>
 </section>
 <section id="tokenisasi">
-<h3>Tokenisasi<a class="headerlink" href="#tokenisasi" title="Link to this heading">#</a></h3>
+<h3>Tokenisasi<a class="headerlink" href="#tokenisasi" title="Permalink to this heading">#</a></h3>
 <p>Melakukan <em>tokenisasi</em> agar teks dipecah menjadi daftar kata per dokumen</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
 
 <span class="n">detik</span><span class="p">[</span><span class="s2">&quot;tokenized&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">detik</span><span class="p">[</span><span class="s2">&quot;clean_stemmed&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tokenize</span><span class="p">)</span>
@@ -1290,9 +1288,9 @@ misalnya “berlari” -&gt; “lari”, “mengajar” -&gt; “ajar”.</p>
 </div>
 </section>
 <section id="hasil-tokenisasi">
-<h3>Hasil tokenisasi<a class="headerlink" href="#hasil-tokenisasi" title="Link to this heading">#</a></h3>
+<h3>Hasil tokenisasi<a class="headerlink" href="#hasil-tokenisasi" title="Permalink to this heading">#</a></h3>
 <section id="id6">
-<h4>berita<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<h4>berita<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">detik</span><span class="p">[[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_stopword&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_symbol&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_spellcheck&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_stemmed&quot;</span><span class="p">,</span> <span class="s2">&quot;tokenized&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -1378,7 +1376,7 @@ misalnya “berlari” -&gt; “lari”, “mengajar” -&gt; “ajar”.</p>
 </div>
 </section>
 <section id="id7">
-<h4><a class="reference external" href="http://pta.trunojoyo.ac.id">pta.trunojoyo.ac.id</a><a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
+<h4><a class="reference external" href="http://pta.trunojoyo.ac.id">pta.trunojoyo.ac.id</a><a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pta</span><span class="p">[[</span><span class="s2">&quot;abstrak&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_stopword&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_no_symbol&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_spellcheck&quot;</span><span class="p">,</span> <span class="s2">&quot;clean_stemmed&quot;</span><span class="p">,</span> <span class="s2">&quot;tokenized&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -1465,7 +1463,7 @@ misalnya “berlari” -&gt; “lari”, “mengajar” -&gt; “ajar”.</p>
 </section>
 </section>
 <section id="saving-procesing">
-<h3>Saving Procesing<a class="headerlink" href="#saving-procesing" title="Link to this heading">#</a></h3>
+<h3>Saving Procesing<a class="headerlink" href="#saving-procesing" title="Permalink to this heading">#</a></h3>
 <p>Hasil preprocessing disimpan dalam file CSV baru:</p>
 <ul class="simple">
 <li><p>detik_cleaned.csv</p></li>

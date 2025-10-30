@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -41,9 +41,9 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=2b91c5f0"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -55,8 +55,6 @@
     <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas6email';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -205,7 +203,7 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Clustering - email</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tugas7.html">Tugas 7 - PageRank</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas7.html">Tugas 7 PageRank</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="tugas7webgoogle.html">Analisis Dataset web-google</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas7berita.html">Analisis Dataset uts_berita</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas7email.html">Analisis Dataset uts_email</a></li>
@@ -429,15 +427,15 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tugas-6-uts-clustering-email">
-<h1>Tugas 6 - UTS | Clustering Email<a class="headerlink" href="#tugas-6-uts-clustering-email" title="Link to this heading">#</a></h1>
+<h1>Tugas 6 - UTS | Clustering Email<a class="headerlink" href="#tugas-6-uts-clustering-email" title="Permalink to this heading">#</a></h1>
 <section id="kmeans">
-<h2>Kmeans<a class="headerlink" href="#kmeans" title="Link to this heading">#</a></h2>
+<h2>Kmeans<a class="headerlink" href="#kmeans" title="Permalink to this heading">#</a></h2>
 <p><strong>import dan load</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import library</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># Load dataset</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;uts_email.csv&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ISO-8859-1&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
@@ -603,17 +601,17 @@ document.write(`
 <p><strong>praprocessing</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">nltk</span>
-<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
-<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.tokenize</span><span class="w"> </span><span class="kn">import</span> <span class="n">word_tokenize</span>
 
 <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
 <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
 
 <span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">))</span>
 
-<span class="k">def</span> <span class="nf">clean_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">clean_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;http\S+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>  <span class="c1"># hapus URL</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^a-zA-Z\s]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>  <span class="c1"># hapus simbol</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>  <span class="c1"># ubah ke huruf kecil</span>
@@ -696,7 +694,7 @@ document.write(`
 <p><strong>Ekstraksi Fitur (TF-IDF Vectorization)</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.feature_extraction.text</span><span class="w"> </span><span class="kn">import</span> <span class="n">TfidfVectorizer</span>
 
 <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">max_df</span><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span> <span class="n">min_df</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">stop_words</span><span class="o">=</span><span class="s1">&#39;english&#39;</span><span class="p">)</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;clean_text&#39;</span><span class="p">])</span>
@@ -713,7 +711,7 @@ document.write(`
 <p><strong>Clustering dengan K-Means</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.cluster</span><span class="w"> </span><span class="kn">import</span> <span class="n">KMeans</span>
 
 <span class="c1"># Misal kita coba 2 cluster dulu</span>
 <span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
@@ -824,7 +822,7 @@ document.write(`
 <p><strong>Evaluasi dengan Silhouette Score</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">silhouette_score</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">silhouette_score</span>
 
 <span class="n">score</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Silhouette Score:&quot;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
@@ -872,12 +870,12 @@ ill, later, sorry, meeting, im, ok, aight, text, yeah, ltgt
 </ul>
 </section>
 <section id="elbow">
-<h2>Elbow<a class="headerlink" href="#elbow" title="Link to this heading">#</a></h2>
+<h2>Elbow<a class="headerlink" href="#elbow" title="Permalink to this heading">#</a></h2>
 <p><strong>cluster dengan elbow</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.cluster</span><span class="w"> </span><span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">inertia</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">K</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># coba jumlah cluster dari 2 sampai 9</span>
@@ -935,7 +933,7 @@ ill, later, sorry, meeting, im, ok, aight, text, yeah, ltgt
 <p><strong>Evaluasi kembali Silhouette Score</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">silhouette_score</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">silhouette_score</span>
 
 <span class="n">score_opt</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">kmeans_opt</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Silhouette Score (k=3):&quot;</span><span class="p">,</span> <span class="n">score_opt</span><span class="p">)</span>
@@ -988,44 +986,44 @@ ok, lor, thanx, ill, come, ur, prob, leave, ask, home
 </div>
 </section>
 <section id="analisis-hasil-clustering-k-means-k-7">
-<h2>Analisis Hasil Clustering (K-Means, k = 7)<a class="headerlink" href="#analisis-hasil-clustering-k-means-k-7" title="Link to this heading">#</a></h2>
+<h2>Analisis Hasil Clustering (K-Means, k = 7)<a class="headerlink" href="#analisis-hasil-clustering-k-means-k-7" title="Permalink to this heading">#</a></h2>
 <section id="cluster-1-obrolan-kasual-dan-balasan-cepat">
-<h3><strong>Cluster 1 – Obrolan Kasual dan Balasan Cepat</strong><a class="headerlink" href="#cluster-1-obrolan-kasual-dan-balasan-cepat" title="Link to this heading">#</a></h3>
+<h3><strong>Cluster 1 – Obrolan Kasual dan Balasan Cepat</strong><a class="headerlink" href="#cluster-1-obrolan-kasual-dan-balasan-cepat" title="Permalink to this heading">#</a></h3>
 <p><strong>Kata dominan:</strong> ill, come, ur, got, sorry, time, know, free<br />
 <strong>Interpretasi:</strong><br />
 Pesan ini berisi balasan cepat atau percakapan koordinasi seperti janji bertemu atau mengatur waktu. Adanya kata “sorry” dan “time” menunjukkan komunikasi interpersonal.<br />
 <strong>Contoh tema:</strong> koordinasi jadwal, respon cepat antar kenalan.</p>
 </section>
 <section id="cluster-2-aktivitas-harian-rencana-pribadi">
-<h3><strong>Cluster 2 – Aktivitas Harian / Rencana Pribadi</strong><a class="headerlink" href="#cluster-2-aktivitas-harian-rencana-pribadi" title="Link to this heading">#</a></h3>
+<h3><strong>Cluster 2 – Aktivitas Harian / Rencana Pribadi</strong><a class="headerlink" href="#cluster-2-aktivitas-harian-rencana-pribadi" title="Permalink to this heading">#</a></h3>
 <p><strong>Kata dominan:</strong> home, going, na, gon, want, sorry, work, really<br />
 <strong>Interpretasi:</strong><br />
 Isi pesan menggambarkan aktivitas harian dan rencana seseorang. Kata seperti <em>home</em>, <em>work</em>, dan <em>sorry</em> menunjukkan konteks kehidupan sehari-hari.<br />
 <strong>Contoh tema:</strong> aktivitas pribadi, percakapan ringan tentang pekerjaan atau rumah.</p>
 </section>
 <section id="cluster-3-ucapan-dan-pesan-positif">
-<h3><strong>Cluster 3 – Ucapan dan Pesan Positif</strong><a class="headerlink" href="#cluster-3-ucapan-dan-pesan-positif" title="Link to this heading">#</a></h3>
+<h3><strong>Cluster 3 – Ucapan dan Pesan Positif</strong><a class="headerlink" href="#cluster-3-ucapan-dan-pesan-positif" title="Permalink to this heading">#</a></h3>
 <p><strong>Kata dominan:</strong> good, morning, day, hope, night, love, sleep, happy<br />
 <strong>Interpretasi:</strong><br />
 Cluster ini jelas berisi pesan-pesan positif seperti salam, doa, dan ucapan kasih.<br />
 <strong>Contoh tema:</strong> ucapan selamat pagi, selamat malam, harapan baik, pesan kasih sayang.</p>
 </section>
 <section id="cluster-4-pesan-formal-email-semi-resmi">
-<h3><strong>Cluster 4 – Pesan Formal / Email Semi-Resmi</strong><a class="headerlink" href="#cluster-4-pesan-formal-email-semi-resmi" title="Link to this heading">#</a></h3>
+<h3><strong>Cluster 4 – Pesan Formal / Email Semi-Resmi</strong><a class="headerlink" href="#cluster-4-pesan-formal-email-semi-resmi" title="Permalink to this heading">#</a></h3>
 <p><strong>Kata dominan:</strong> dear, day, happen, good, happy, morning, nice, hi<br />
 <strong>Interpretasi:</strong><br />
 Adanya kata “dear” dan “voucher” mengindikasikan pesan yang lebih sopan atau sedikit formal.<br />
 <strong>Contoh tema:</strong> email sopan antar rekan kerja atau pesan semi-promosi yang tidak sepenuhnya spam.</p>
 </section>
 <section id="cluster-5-pesan-promosi-atau-spam">
-<h3><strong>Cluster 5 – Pesan Promosi atau Spam</strong><a class="headerlink" href="#cluster-5-pesan-promosi-atau-spam" title="Link to this heading">#</a></h3>
+<h3><strong>Cluster 5 – Pesan Promosi atau Spam</strong><a class="headerlink" href="#cluster-5-pesan-promosi-atau-spam" title="Permalink to this heading">#</a></h3>
 <p><strong>Kata dominan:</strong> send, message, pls, stop, phone, free, ur<br />
 <strong>Interpretasi:</strong><br />
 Cluster ini mengandung kata yang sering muncul di SMS spam seperti <em>“free”</em>, <em>“stop”</em>, <em>“message”</em>, dan <em>“phone”</em>.<br />
 <strong>Contoh tema:</strong> pesan promosi, iklan, atau spam dengan ajakan tertentu.</p>
 </section>
 <section id="cluster-6-pesan-santai-dan-respons-cepat">
-<h3><strong>Cluster 6 – Pesan Santai dan Respons Cepat</strong><a class="headerlink" href="#cluster-6-pesan-santai-dan-respons-cepat" title="Link to this heading">#</a></h3>
+<h3><strong>Cluster 6 – Pesan Santai dan Respons Cepat</strong><a class="headerlink" href="#cluster-6-pesan-santai-dan-respons-cepat" title="Permalink to this heading">#</a></h3>
 <p><strong>Kata dominan:</strong> ok, lor, thanx, come, ur, ask, home<br />
 <strong>Interpretasi:</strong><br />
 Pesan bersifat sangat informal, menggunakan singkatan khas percakapan (seperti <em>lor</em>, <em>thanx</em>).<br />
