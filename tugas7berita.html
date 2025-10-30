@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tugas 4 | Ekstraksi -&gt; TFIDF &amp; Word2Vec &#8212; Project PPW</title>
+    <title>Tugas 7 | Analisis PageRank Dataset uts_berita &#8212; Project PPW</title>
   
   
   
@@ -55,11 +55,11 @@
     <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas4ekstraksi';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas7berita';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas 4 | Klasifikasi -&gt; TFIDF &amp; Word2Vec" href="tugas4klasifikasi.html" />
-    <link rel="prev" title="Tugas 4" href="tugas4.html" />
+    <link rel="next" title="Tugas 7 | Analisis PageRank Dataset uts_email" href="tugas7email.html" />
+    <link rel="prev" title="Tugas 7 | Analisis PageRank Dataset web-google" href="tugas7webgoogle.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -188,8 +188,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tugas3.html">Tugas 3</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="tugas4.html">Tugas 4</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ekstraksi - TFIDF &amp; Word2vec</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas4.html">Tugas 4</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tugas4ekstraksi.html">Ekstraksi - TFIDF &amp; Word2vec</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas4klasifikasi.html">Klasifikasi - TFIDF &amp; Word2vec</a></li>
 </ul>
 </li>
@@ -203,9 +203,9 @@
 <li class="toctree-l2"><a class="reference internal" href="tugas6email.html">Clustering - email</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tugas7.html">Tugas 7 PageRank</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tugas7.html">Tugas 7 PageRank</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="tugas7webgoogle.html">Analisis Dataset web-google</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tugas7berita.html">Analisis Dataset uts_berita</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Analisis Dataset uts_berita</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas7email.html">Analisis Dataset uts_email</a></li>
 </ul>
 </li>
@@ -280,7 +280,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas4ekstraksi.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas7berita.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -310,7 +310,7 @@
       
       
       
-      <li><a href="_sources/tugas4ekstraksi.ipynb" target="_blank"
+      <li><a href="_sources/tugas7berita.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -394,7 +394,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas 4 | Ekstraksi -> TFIDF & Word2Vec</h1>
+    <h1>Tugas 7 | Analisis PageRank Dataset uts_berita</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -404,9 +404,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf">TF-IDF</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-embedding">Word Embedding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensi-keduanya">Dimensi Keduanya</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library">import library</a></li>
 </ul>
             </nav>
         </div>
@@ -418,152 +416,252 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-4-ekstraksi-tfidf-word2vec">
-<h1>Tugas 4 | Ekstraksi -&gt; TFIDF &amp; Word2Vec<a class="headerlink" href="#tugas-4-ekstraksi-tfidf-word2vec" title="Permalink to this heading">#</a></h1>
-<p>Ekstrkasi dilakukan menggunakan <em>TF-IDF</em> dan <em>Word Embedding</em> untuk mendapatkan perbandingan mana yang lebih optimal.</p>
-<section id="tf-idf">
-<h2>TF-IDF<a class="headerlink" href="#tf-idf" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import library</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.feature_extraction.text</span><span class="w"> </span><span class="kn">import</span> <span class="n">TfidfVectorizer</span>
-
-<span class="c1"># 1. Baca dataset</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;detik_cleaned.csv&quot;</span><span class="p">)</span>
-
-<span class="c1"># 2. Ambil kolom teks (pakai clean_stemmed biar sudah bersih)</span>
-<span class="n">texts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;clean_stemmed&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
-
-<span class="c1"># 3. TF-IDF Vectorizer</span>
-<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span>
-
-<span class="c1"># 4. Konversi ke DataFrame</span>
-<span class="n">tfidf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-    <span class="n">X</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span>
-    <span class="n">columns</span><span class="o">=</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
-<span class="p">)</span>
-
-<span class="c1"># (opsional) Tambahkan kolom kategori biar bisa dipakai untuk klasifikasi</span>
-<span class="n">tfidf_df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Kategori&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">texts</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="s2">&quot;Kategori&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-
-<span class="c1"># 5. Simpan ke CSV</span>
-<span class="n">tfidf_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;tfidf_result.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TF-IDF berhasil disimpan sebagai tfidf_result.csv&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TF-IDF berhasil disimpan sebagai tfidf_result.csv
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="word-embedding">
-<h2>Word Embedding<a class="headerlink" href="#word-embedding" title="Permalink to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-7-analisis-pagerank-dataset-uts-berita">
+<h1>Tugas 7 | Analisis PageRank Dataset uts_berita<a class="headerlink" href="#tugas-7-analisis-pagerank-dataset-uts-berita" title="Permalink to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Graph hubungan antar berita</p></li>
+<li><p>Visualisasi graf</p></li>
+<li><p>5 berita dengan PageRank tertinggi</p></li>
+</ol>
+<section id="import-library">
+<h2>import library<a class="headerlink" href="#import-library" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">gensim.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Word2Vec</span>
-
-<span class="c1"># 1. Load dataset</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;detik_cleaned.csv&quot;</span><span class="p">)</span>
-
-<span class="c1"># 2. Ambil teks hasil stemming (sudah bersih)</span>
-<span class="n">texts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;clean_stemmed&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
-
-<span class="c1"># 3. Tokenisasi</span>
-<span class="n">tokenized_texts</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">texts</span><span class="p">]</span>
-
-<span class="c1"># 4. Latih Word2Vec</span>
-<span class="n">w2v_model</span> <span class="o">=</span> <span class="n">Word2Vec</span><span class="p">(</span>
-    <span class="n">sentences</span><span class="o">=</span><span class="n">tokenized_texts</span><span class="p">,</span>
-    <span class="n">vector_size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>   <span class="c1"># dimensi embedding</span>
-    <span class="n">window</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
-    <span class="n">min_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-    <span class="n">workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
-    <span class="n">sg</span><span class="o">=</span><span class="mi">1</span>
-<span class="p">)</span>
-
-<span class="c1"># 5. Representasi dokumen = rata-rata embedding kata</span>
-<span class="n">doc_embeddings</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">tokens</span> <span class="ow">in</span> <span class="n">tokenized_texts</span><span class="p">:</span>
-    <span class="n">vectors</span> <span class="o">=</span> <span class="p">[</span><span class="n">w2v_model</span><span class="o">.</span><span class="n">wv</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">w2v_model</span><span class="o">.</span><span class="n">wv</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">vectors</span><span class="p">:</span>
-        <span class="n">doc_embeddings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">doc_embeddings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>  <span class="c1"># kalau dokumen kosong</span>
-
-<span class="n">doc_embeddings</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">doc_embeddings</span><span class="p">)</span>
-
-<span class="c1"># 6. Konversi ke DataFrame</span>
-<span class="n">embedding_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">doc_embeddings</span><span class="p">)</span>
-
-<span class="c1"># Opsional: tambahkan kategori biar bisa dipakai untuk analisis/klasifikasi</span>
-<span class="n">embedding_df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Kategori&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">texts</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="s2">&quot;Kategori&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-
-<span class="c1"># 7. Simpan ke CSV</span>
-<span class="n">embedding_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;word2vec_result.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Word Embedding berhasil disimpan sebagai word2vec_result.csv&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Word Embedding berhasil disimpan sebagai word2vec_result.csv
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.feature_extraction.text</span><span class="w"> </span><span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics.pairwise</span><span class="w"> </span><span class="kn">import</span> <span class="n">cosine_similarity</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="dimensi-keduanya">
-<h2>Dimensi Keduanya<a class="headerlink" href="#dimensi-keduanya" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.feature_extraction.text</span><span class="w"> </span><span class="kn">import</span> <span class="n">TfidfVectorizer</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">gensim.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Word2Vec</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="c1"># 1. Load dataset</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;detik_cleaned.csv&quot;</span><span class="p">)</span>
-<span class="n">texts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;clean_stemmed&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
-<span class="n">tokenized</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">texts</span><span class="p">]</span>  <span class="c1"># tokenisasi sederhana</span>
-
-<span class="c1"># 2. TF-IDF</span>
-<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
-<span class="n">X_tfidf</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimensi TF-IDF:&quot;</span><span class="p">,</span> <span class="n">X_tfidf</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-
-<span class="c1"># 3. Word2Vec</span>
-<span class="n">w2v_model</span> <span class="o">=</span> <span class="n">Word2Vec</span><span class="p">(</span><span class="n">sentences</span><span class="o">=</span><span class="n">tokenized</span><span class="p">,</span> <span class="n">vector_size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">min_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">workers</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="c1">#Melatih model Word2Vec dengan vektor berdimensi 100.</span>
-
-<span class="c1"># Buat representasi dokumen dengan rata-rata embedding kata</span>
-<span class="n">doc_embeddings</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">tokens</span> <span class="ow">in</span> <span class="n">tokenized</span><span class="p">:</span>
-    <span class="n">vectors</span> <span class="o">=</span> <span class="p">[</span><span class="n">w2v_model</span><span class="o">.</span><span class="n">wv</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">w2v_model</span><span class="o">.</span><span class="n">wv</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">vectors</span><span class="p">:</span>
-        <span class="n">doc_embeddings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">doc_embeddings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
-<span class="n">doc_embeddings</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">doc_embeddings</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimensi Word2Vec:&quot;</span><span class="p">,</span> <span class="n">doc_embeddings</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Baca dataset berita</span>
+<span class="n">df_berita</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;uts_berita.csv&quot;</span><span class="p">)</span>
+<span class="n">df_berita</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dimensi TF-IDF: 3439
-Dimensi Word2Vec: 100
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>No</th>
+      <th>judul</th>
+      <th>berita</th>
+      <th>tanggal</th>
+      <th>kategori</th>
+      <th>link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Airlangga Harap Kenaikan UMP Tingkatkan Daya B...</td>
+      <td>Menteri Koordinator (Menko) Bidang Perekonomia...</td>
+      <td>Minggu, 01 Des 2024 23:40 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412012...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>PT SIER Beri Penghargaan untuk 50 Tenant Terba...</td>
+      <td>Dalam rangka memeriahkan hari jadi ke-50, PT S...</td>
+      <td>Minggu, 01 Des 2024 20:45 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412012...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Prabowo Bakal Bentuk Kementerian Penerimaan Ne...</td>
+      <td>Wacana Presiden Prabowo Subianto akan membentu...</td>
+      <td>Minggu, 01 Des 2024 19:40 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412011...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Sinergi Kemenag &amp; BPJS Ketenagakerjaan Lindung...</td>
+      <td>BPJS Ketenagakerjaan dan Kementerian Agama (Ke...</td>
+      <td>Minggu, 01 Des 2024 19:03 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412011...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Pemerintah Segera Bentuk Satgas PHK Usai Tetap...</td>
+      <td>Pemerintah akan segera membentuk Satuan Tugas ...</td>
+      <td>Minggu, 01 Des 2024 19:00 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412011...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1495</th>
+      <td>1496</td>
+      <td>Laporan Sebab Tabrakan Pesawat-Black Hawk Dita...</td>
+      <td>Anggota Dewan Keselamatan Transportasi Nasiona...</td>
+      <td>Jumat, 31 Jan 2025 04:40 WIB</td>
+      <td>Internasional</td>
+      <td>https://www.cnnindonesia.com/internasional/202...</td>
+    </tr>
+    <tr>
+      <th>1496</th>
+      <td>1497</td>
+      <td>Israel Bebaskan 110 Sandera Palestina, Diantar...</td>
+      <td>Israel telah membebaskan 110 tahanan Palestina...</td>
+      <td>Jumat, 31 Jan 2025 03:01 WIB</td>
+      <td>Internasional</td>
+      <td>https://www.cnnindonesia.com/internasional/202...</td>
+    </tr>
+    <tr>
+      <th>1497</th>
+      <td>1498</td>
+      <td>Hamas Konfirmasi Kematian Komandan Al Qassam M...</td>
+      <td>Hamas mengonfirmasi kematian kepala militernya...</td>
+      <td>Jumat, 31 Jan 2025 02:30 WIB</td>
+      <td>Internasional</td>
+      <td>https://www.cnnindonesia.com/internasional/202...</td>
+    </tr>
+    <tr>
+      <th>1498</th>
+      <td>1499</td>
+      <td>Black Box American Airlines Ditemukan Usai Tab...</td>
+      <td>Tim penyelam diduga menemukan satu dari dua bl...</td>
+      <td>Jumat, 31 Jan 2025 01:00 WIB</td>
+      <td>Internasional</td>
+      <td>https://www.cnnindonesia.com/internasional/202...</td>
+    </tr>
+    <tr>
+      <th>1499</th>
+      <td>1500</td>
+      <td>Trump Salahkan Biden soal Penurunan Standar Ke...</td>
+      <td>Presiden AS Donald Trump menyalahkan pemerinta...</td>
+      <td>Jumat, 31 Jan 2025 00:40 WIB</td>
+      <td>Internasional</td>
+      <td>https://www.cnnindonesia.com/internasional/202...</td>
+    </tr>
+  </tbody>
+</table>
+<p>1500 rows × 6 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pakai kolom yang sudah di procesing sebelumnya yaitu &#39;clean_berita&#39;</span>
+<span class="k">if</span> <span class="s1">&#39;clean_berita&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df_berita</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">df_berita</span><span class="p">[</span><span class="s1">&#39;clean_berita&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_berita</span><span class="p">[</span><span class="s1">&#39;berita&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>stemming/stopword, ubah ubah paramater embedding sampai menemukan yang bagus</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ubah teks berita ke vektor TF-IDF</span>
+<span class="n">vectorizer_berita</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">max_df</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">min_df</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">X_berita</span> <span class="o">=</span> <span class="n">vectorizer_berita</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_berita</span><span class="p">[</span><span class="s1">&#39;clean_berita&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hitung kemiripan antar berita (cosine similarity)</span>
+<span class="n">sim_berita</span> <span class="o">=</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">X_berita</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Buat graph berdasarkan threshold similarity (misal &gt; 0.3)</span>
+<span class="n">G_berita</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sim_berita</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sim_berita</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">sim_berita</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.3</span><span class="p">:</span>
+            <span class="n">G_berita</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="n">sim_berita</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Node (berita): </span><span class="si">{</span><span class="n">G_berita</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Edge (berita): </span><span class="si">{</span><span class="n">G_berita</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah Node (berita): 1276
+Jumlah Edge (berita): 9389
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hitung PageRank berita</span>
+<span class="n">pagerank_berita</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">G_berita</span><span class="p">)</span>
+<span class="n">sorted_pr_berita</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">pagerank_berita</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5 Berita dengan PageRank tertinggi:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">sorted_pr_berita</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="n">judul</span> <span class="o">=</span> <span class="n">df_berita</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;judul&#39;</span><span class="p">,</span> <span class="s1">&#39;[tidak ada judul]&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Berita #</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">judul</span><span class="si">}</span><span class="s2">): </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 Berita dengan PageRank tertinggi:
+Berita #543 (Timnas Indonesia Pasca-STY: Garang atau Garing?): 0.001992447544093504
+Berita #935 (Makan Gizi Gratis Solo Dimulai Pekan Depan, Pemkot Belum Dikoordinasi): 0.0017302430106725893
+Berita #551 (Media Korea Sorot Beda Nasib STY dan Kim Sang Sik usai Piala AFF 2024): 0.0016830911684315808
+Berita #607 (Pantau Timnas Indonesia U-20, Kluivert Diskusi dengan Indra Sjafri): 0.0016811289398406422
+Berita #439 (Klasemen Grup B Piala AFF 2024: Timnas Indonesia Harap-harap Cemas): 0.0016406718536894618
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualisasi graph berita (ambil subset kecil)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">sub_berita</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">G_berita</span><span class="o">.</span><span class="n">nodes</span><span class="p">)[:</span><span class="mi">50</span><span class="p">]</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G_berita</span><span class="o">.</span><span class="n">subgraph</span><span class="p">(</span><span class="n">sub_berita</span><span class="p">),</span> <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Visualisasi Subgraph Berita (50 Node Pertama)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/71abcc2b5300afb53c76e9c639ad95028400b392e32eddd8c911aed490888a89.png" src="_images/71abcc2b5300afb53c76e9c639ad95028400b392e32eddd8c911aed490888a89.png" />
+</div>
+</div>
 </section>
 </section>
 
@@ -598,20 +696,20 @@ Dimensi Word2Vec: 100
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="tugas4.html"
+       href="tugas7webgoogle.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tugas 4</p>
+        <p class="prev-next-title">Tugas 7 | Analisis PageRank Dataset web-google</p>
       </div>
     </a>
     <a class="right-next"
-       href="tugas4klasifikasi.html"
+       href="tugas7email.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas 4 | Klasifikasi -&gt; TFIDF &amp; Word2Vec</p>
+        <p class="prev-next-title">Tugas 7 | Analisis PageRank Dataset uts_email</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -631,9 +729,7 @@ Dimensi Word2Vec: 100
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf">TF-IDF</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-embedding">Word Embedding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensi-keduanya">Dimensi Keduanya</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library">import library</a></li>
 </ul>
   </nav></div>
 

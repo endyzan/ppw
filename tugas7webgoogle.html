@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tugas 4 | Ekstraksi -&gt; TFIDF &amp; Word2Vec &#8212; Project PPW</title>
+    <title>Tugas 7 | Analisis PageRank Dataset web-google &#8212; Project PPW</title>
   
   
   
@@ -55,11 +55,11 @@
     <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas4ekstraksi';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas7webgoogle';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas 4 | Klasifikasi -&gt; TFIDF &amp; Word2Vec" href="tugas4klasifikasi.html" />
-    <link rel="prev" title="Tugas 4" href="tugas4.html" />
+    <link rel="next" title="Tugas 7 | Analisis PageRank Dataset uts_berita" href="tugas7berita.html" />
+    <link rel="prev" title="Tugas 7 | Analisis Graph dan PageRank" href="tugas7.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -188,8 +188,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tugas3.html">Tugas 3</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="tugas4.html">Tugas 4</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ekstraksi - TFIDF &amp; Word2vec</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas4.html">Tugas 4</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tugas4ekstraksi.html">Ekstraksi - TFIDF &amp; Word2vec</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas4klasifikasi.html">Klasifikasi - TFIDF &amp; Word2vec</a></li>
 </ul>
 </li>
@@ -203,8 +203,8 @@
 <li class="toctree-l2"><a class="reference internal" href="tugas6email.html">Clustering - email</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tugas7.html">Tugas 7 PageRank</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="tugas7webgoogle.html">Analisis Dataset web-google</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tugas7.html">Tugas 7 PageRank</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Analisis Dataset web-google</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas7berita.html">Analisis Dataset uts_berita</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas7email.html">Analisis Dataset uts_email</a></li>
 </ul>
@@ -280,7 +280,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas4ekstraksi.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas7webgoogle.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -310,7 +310,7 @@
       
       
       
-      <li><a href="_sources/tugas4ekstraksi.ipynb" target="_blank"
+      <li><a href="_sources/tugas7webgoogle.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -394,7 +394,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas 4 | Ekstraksi -> TFIDF & Word2Vec</h1>
+    <h1>Tugas 7 | Analisis PageRank Dataset web-google</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -404,9 +404,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf">TF-IDF</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-embedding">Word Embedding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensi-keduanya">Dimensi Keduanya</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library">import library</a></li>
 </ul>
             </nav>
         </div>
@@ -418,152 +416,181 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-4-ekstraksi-tfidf-word2vec">
-<h1>Tugas 4 | Ekstraksi -&gt; TFIDF &amp; Word2Vec<a class="headerlink" href="#tugas-4-ekstraksi-tfidf-word2vec" title="Permalink to this heading">#</a></h1>
-<p>Ekstrkasi dilakukan menggunakan <em>TF-IDF</em> dan <em>Word Embedding</em> untuk mendapatkan perbandingan mana yang lebih optimal.</p>
-<section id="tf-idf">
-<h2>TF-IDF<a class="headerlink" href="#tf-idf" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import library</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.feature_extraction.text</span><span class="w"> </span><span class="kn">import</span> <span class="n">TfidfVectorizer</span>
-
-<span class="c1"># 1. Baca dataset</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;detik_cleaned.csv&quot;</span><span class="p">)</span>
-
-<span class="c1"># 2. Ambil kolom teks (pakai clean_stemmed biar sudah bersih)</span>
-<span class="n">texts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;clean_stemmed&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
-
-<span class="c1"># 3. TF-IDF Vectorizer</span>
-<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span>
-
-<span class="c1"># 4. Konversi ke DataFrame</span>
-<span class="n">tfidf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-    <span class="n">X</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span>
-    <span class="n">columns</span><span class="o">=</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
-<span class="p">)</span>
-
-<span class="c1"># (opsional) Tambahkan kolom kategori biar bisa dipakai untuk klasifikasi</span>
-<span class="n">tfidf_df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Kategori&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">texts</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="s2">&quot;Kategori&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-
-<span class="c1"># 5. Simpan ke CSV</span>
-<span class="n">tfidf_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;tfidf_result.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TF-IDF berhasil disimpan sebagai tfidf_result.csv&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TF-IDF berhasil disimpan sebagai tfidf_result.csv
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="word-embedding">
-<h2>Word Embedding<a class="headerlink" href="#word-embedding" title="Permalink to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-7-analisis-pagerank-dataset-web-google">
+<h1>Tugas 7 | Analisis PageRank Dataset web-google<a class="headerlink" href="#tugas-7-analisis-pagerank-dataset-web-google" title="Permalink to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Graph (Directed)</p></li>
+<li><p>Jumlah node &amp; edge</p></li>
+<li><p>Visualisasi sebagian graph</p></li>
+<li><p>5 Node dengan PageRank tertinggi</p></li>
+</ol>
+<ul class="simple">
+<li><p>Dataset ini berisi pasangan (FromNodeId, ToNodeId)</p></li>
+<li><p>yang merepresentasikan arah tautan antar halaman web.</p></li>
+</ul>
+<section id="import-library">
+<h2>import library<a class="headerlink" href="#import-library" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">gensim.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Word2Vec</span>
-
-<span class="c1"># 1. Load dataset</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;detik_cleaned.csv&quot;</span><span class="p">)</span>
-
-<span class="c1"># 2. Ambil teks hasil stemming (sudah bersih)</span>
-<span class="n">texts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;clean_stemmed&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
-
-<span class="c1"># 3. Tokenisasi</span>
-<span class="n">tokenized_texts</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">texts</span><span class="p">]</span>
-
-<span class="c1"># 4. Latih Word2Vec</span>
-<span class="n">w2v_model</span> <span class="o">=</span> <span class="n">Word2Vec</span><span class="p">(</span>
-    <span class="n">sentences</span><span class="o">=</span><span class="n">tokenized_texts</span><span class="p">,</span>
-    <span class="n">vector_size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>   <span class="c1"># dimensi embedding</span>
-    <span class="n">window</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
-    <span class="n">min_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-    <span class="n">workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
-    <span class="n">sg</span><span class="o">=</span><span class="mi">1</span>
-<span class="p">)</span>
-
-<span class="c1"># 5. Representasi dokumen = rata-rata embedding kata</span>
-<span class="n">doc_embeddings</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">tokens</span> <span class="ow">in</span> <span class="n">tokenized_texts</span><span class="p">:</span>
-    <span class="n">vectors</span> <span class="o">=</span> <span class="p">[</span><span class="n">w2v_model</span><span class="o">.</span><span class="n">wv</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">w2v_model</span><span class="o">.</span><span class="n">wv</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">vectors</span><span class="p">:</span>
-        <span class="n">doc_embeddings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">doc_embeddings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>  <span class="c1"># kalau dokumen kosong</span>
-
-<span class="n">doc_embeddings</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">doc_embeddings</span><span class="p">)</span>
-
-<span class="c1"># 6. Konversi ke DataFrame</span>
-<span class="n">embedding_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">doc_embeddings</span><span class="p">)</span>
-
-<span class="c1"># Opsional: tambahkan kategori biar bisa dipakai untuk analisis/klasifikasi</span>
-<span class="n">embedding_df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Kategori&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">texts</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="s2">&quot;Kategori&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-
-<span class="c1"># 7. Simpan ke CSV</span>
-<span class="n">embedding_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;word2vec_result.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Word Embedding berhasil disimpan sebagai word2vec_result.csv&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Word Embedding berhasil disimpan sebagai word2vec_result.csv
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.feature_extraction.text</span><span class="w"> </span><span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics.pairwise</span><span class="w"> </span><span class="kn">import</span> <span class="n">cosine_similarity</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="dimensi-keduanya">
-<h2>Dimensi Keduanya<a class="headerlink" href="#dimensi-keduanya" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.feature_extraction.text</span><span class="w"> </span><span class="kn">import</span> <span class="n">TfidfVectorizer</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">gensim.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Word2Vec</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="c1"># 1. Load dataset</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;detik_cleaned.csv&quot;</span><span class="p">)</span>
-<span class="n">texts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;clean_stemmed&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
-<span class="n">tokenized</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">texts</span><span class="p">]</span>  <span class="c1"># tokenisasi sederhana</span>
-
-<span class="c1"># 2. TF-IDF</span>
-<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
-<span class="n">X_tfidf</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimensi TF-IDF:&quot;</span><span class="p">,</span> <span class="n">X_tfidf</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-
-<span class="c1"># 3. Word2Vec</span>
-<span class="n">w2v_model</span> <span class="o">=</span> <span class="n">Word2Vec</span><span class="p">(</span><span class="n">sentences</span><span class="o">=</span><span class="n">tokenized</span><span class="p">,</span> <span class="n">vector_size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">min_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">workers</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="c1">#Melatih model Word2Vec dengan vektor berdimensi 100.</span>
-
-<span class="c1"># Buat representasi dokumen dengan rata-rata embedding kata</span>
-<span class="n">doc_embeddings</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">tokens</span> <span class="ow">in</span> <span class="n">tokenized</span><span class="p">:</span>
-    <span class="n">vectors</span> <span class="o">=</span> <span class="p">[</span><span class="n">w2v_model</span><span class="o">.</span><span class="n">wv</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">w2v_model</span><span class="o">.</span><span class="n">wv</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">vectors</span><span class="p">:</span>
-        <span class="n">doc_embeddings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">doc_embeddings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
-<span class="n">doc_embeddings</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">doc_embeddings</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimensi Word2Vec:&quot;</span><span class="p">,</span> <span class="n">doc_embeddings</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Baca dataset dengan mengabaikan baris komentar (yang diawali &#39;#&#39;)</span>
+<span class="n">df_web</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;web-Google.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;FromNodeId&#39;</span><span class="p">,</span> <span class="s1">&#39;ToNodeId&#39;</span><span class="p">])</span>
+<span class="n">df_web</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dimensi TF-IDF: 3439
-Dimensi Word2Vec: 100
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FromNodeId</th>
+      <th>ToNodeId</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>11342</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>824020</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>867923</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>891835</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>11342</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>78318</th>
+      <td>495600</td>
+      <td>271199</td>
+    </tr>
+    <tr>
+      <th>78319</th>
+      <td>495600</td>
+      <td>407927</td>
+    </tr>
+    <tr>
+      <th>78320</th>
+      <td>495600</td>
+      <td>555924</td>
+    </tr>
+    <tr>
+      <th>78321</th>
+      <td>495600</td>
+      <td>628974</td>
+    </tr>
+    <tr>
+      <th>78322</th>
+      <td>495600</td>
+      <td>905532</td>
+    </tr>
+  </tbody>
+</table>
+<p>78323 rows × 2 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Buat directed graph menggunakan NetworkX</span>
+<span class="n">G_web</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+<span class="n">G_web</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">df_web</span><span class="p">[</span><span class="s1">&#39;FromNodeId&#39;</span><span class="p">],</span> <span class="n">df_web</span><span class="p">[</span><span class="s1">&#39;ToNodeId&#39;</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Node: </span><span class="si">{</span><span class="n">G_web</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah Edge: </span><span class="si">{</span><span class="n">G_web</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah Node: 10000
+Jumlah Edge: 78323
 </pre></div>
 </div>
 </div>
 </div>
-<p>stemming/stopword, ubah ubah paramater embedding sampai menemukan yang bagus</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hitung PageRank</span>
+<span class="n">pagerank_web</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">G_web</span><span class="p">)</span>
+
+<span class="c1"># Urutkan node berdasarkan nilai PageRank</span>
+<span class="n">sorted_pr_web</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">pagerank_web</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5 Node dengan PageRank tertinggi:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">sorted_pr_web</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Node </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 Node dengan PageRank tertinggi:
+Node 486980: 0.006515404427077107
+Node 285814: 0.004632753166876134
+Node 226374: 0.003301453419813612
+Node 163075: 0.0032880956215481367
+Node 555924: 0.002756058619751608
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualisasi sebagian graph (misal 50 node pertama)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">sub_web</span> <span class="o">=</span> <span class="n">G_web</span><span class="o">.</span><span class="n">subgraph</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">G_web</span><span class="o">.</span><span class="n">nodes</span><span class="p">)[:</span><span class="mi">50</span><span class="p">])</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">sub_web</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">arrows</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Visualisasi Subgraph (50 Node Pertama dari web-Google.txt)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/084c22cb54543bed4e35f2e003aecbb5db30df52aa22158ca46d085a73a768b8.png" src="_images/084c22cb54543bed4e35f2e003aecbb5db30df52aa22158ca46d085a73a768b8.png" />
+</div>
+</div>
 </section>
 </section>
 
@@ -598,20 +625,20 @@ Dimensi Word2Vec: 100
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="tugas4.html"
+       href="tugas7.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tugas 4</p>
+        <p class="prev-next-title">Tugas 7 | Analisis Graph dan PageRank</p>
       </div>
     </a>
     <a class="right-next"
-       href="tugas4klasifikasi.html"
+       href="tugas7berita.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas 4 | Klasifikasi -&gt; TFIDF &amp; Word2Vec</p>
+        <p class="prev-next-title">Tugas 7 | Analisis PageRank Dataset uts_berita</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -631,9 +658,7 @@ Dimensi Word2Vec: 100
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf">TF-IDF</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-embedding">Word Embedding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensi-keduanya">Dimensi Keduanya</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library">import library</a></li>
 </ul>
   </nav></div>
 
