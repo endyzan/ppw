@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tugas 5 &#8212; Project PPW</title>
+    <title>Tugas 7 | Analisis Graph dan PageRank &#8212; Project PPW</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'tugass5';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas7';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas 5 | Ekstraksi - LDA" href="tugas5ekslda.html" />
-    <link rel="prev" title="Tugas 4 | Klasifikasi -&gt; TFIDF &amp; Word2Vec" href="tugas4klasifikasi.html" />
+    <link rel="next" title="Tugas 7 | Analisis PageRank Dataset web-google.txt" href="tugas7webgoogle.html" />
+    <link rel="prev" title="Tugas 6 - UTS | Clustering Email" href="tugas6email.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -195,7 +195,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tugas4klasifikasi.html">Klasifikasi - TFIDF &amp; Word2vec</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Tugas 5</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugass5.html">Tugas 5</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="tugas5ekslda.html">Ekstraksi - LDA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas5klaslda.html">Klasifikasi - LDA</a></li>
 </ul>
@@ -203,6 +203,12 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="tugas6.html">Tugas 6 UTS</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="tugas6berita.html">Klasifikasi - Berita</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas6email.html">Clustering - email</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Tugas 7 - PageRank</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tugas7webgoogle.html">Analisis Dataset web-google</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas7berita.html">Analisis Dataset uts_berita</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas7email.html">Analisis Dataset uts_email</a></li>
 </ul>
 </li>
 </ul>
@@ -276,7 +282,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugass5.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas7.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -306,7 +312,7 @@
       
       
       
-      <li><a href="_sources/tugass5.md" target="_blank"
+      <li><a href="_sources/tugas7.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -388,7 +394,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas 5</h1>
+    <h1>Tugas 7 | Analisis Graph dan PageRank</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -402,12 +408,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-5">
-<h1>Tugas 5<a class="headerlink" href="#tugas-5" title="Link to this heading">#</a></h1>
-<p>Ini adalah kumpulan tugas 5 yang terdiri dari:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-7-analisis-graph-dan-pagerank">
+<h1>Tugas 7 | Analisis Graph dan PageRank<a class="headerlink" href="#tugas-7-analisis-graph-dan-pagerank" title="Link to this heading">#</a></h1>
+<p>Pada tugas 7 terdapat 3 proyek yaitu:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#tugas5ekstraksi.ipynb"><span class="xref myst">Ekstraksi</span></a></p></li>
-<li><p><a class="reference internal" href="#tugas5klasifikasi.ipynb"><span class="xref myst">Klasifikasi</span></a></p></li>
+<li><p><a class="reference internal" href="tugas7webgoogle.html"><span class="std std-doc">Analisis Dataset web-google.txt</span></a></p></li>
+<li><p><a class="reference internal" href="tugas7berita.html"><span class="std std-doc">Analisis Dataset uts_berita</span></a></p></li>
+<li><p><a class="reference internal" href="tugas7email.html"><span class="std std-doc">Analisis Dataset uts_email</span></a></p></li>
 </ul>
 <div class="toctree-wrapper compound">
 </div>
@@ -444,20 +451,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="tugas4klasifikasi.html"
+       href="tugas6email.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tugas 4 | Klasifikasi -&gt; TFIDF &amp; Word2Vec</p>
+        <p class="prev-next-title">Tugas 6 - UTS | Clustering Email</p>
       </div>
     </a>
     <a class="right-next"
-       href="tugas5ekslda.html"
+       href="tugas7webgoogle.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas 5 | Ekstraksi - LDA</p>
+        <p class="prev-next-title">Tugas 7 | Analisis PageRank Dataset <a class="reference download internal" download="" href="_downloads/c5c69d75cb92a5065332928191abb460/web-Google.txt"><span class="xref download myst">web-google.txt</span></a></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
