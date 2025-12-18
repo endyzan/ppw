@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tugas 5 &#8212; Project PPW</title>
+    <title>Tugas 9 | Crawling Twiter (X) &#8212; Project PPW</title>
   
   
   
@@ -55,11 +55,11 @@
     <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas5';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas9duacraw';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas 5 | Ekstraksi - LDA" href="tugas5ekslda.html" />
-    <link rel="prev" title="Tugas 4 | Klasifikasi -&gt; TFIDF &amp; Word2Vec" href="tugas4klasifikasi.html" />
+    <link rel="next" title="Tugas 10 | Word Graph" href="tugas10.html" />
+    <link rel="prev" title="Tugas 9 | Crawling Twiter (X)" href="tugas9duaproc.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -193,7 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tugas4klasifikasi.html">Klasifikasi - TFIDF &amp; Word2vec</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Tugas 5</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas5.html">Tugas 5</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="tugas5ekslda.html">Ekstraksi - LDA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas5klaslda.html">Klasifikasi - LDA</a></li>
 </ul>
@@ -210,10 +210,10 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tugas8.html">Tugas 8 web mining</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tugas9.html">Tugas 9</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tugas9.html">Tugas 9</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="tugas9satu.html">Facebook Komunitas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugas9duaproc.html">Crawling X</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tugas9duacraw.html">Crawling X</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Crawling X</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tugas10.html">Tugas 10 word graph</a></li>
@@ -288,7 +288,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas5.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas9duacraw.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -318,7 +318,7 @@
       
       
       
-      <li><a href="_sources/tugas5.md" target="_blank"
+      <li><a href="_sources/tugas9duacraw.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -328,7 +328,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -400,7 +400,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas 5</h1>
+    <h1>Tugas 9 | Crawling Twiter (X)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -414,14 +414,98 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-5">
-<h1>Tugas 5<a class="headerlink" href="#tugas-5" title="Permalink to this heading">#</a></h1>
-<p>Ini adalah kumpulan tugas 5 yang terdiri dari:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="tugas5ekslda.html"><span class="std std-doc">Ekstraksi</span></a></p></li>
-<li><p><a class="reference internal" href="tugas5klaslda.html"><span class="std std-doc">Klasifikasi</span></a></p></li>
-</ul>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-9-crawling-twiter-x">
+<h1>Tugas 9 | Crawling Twiter (X)<a class="headerlink" href="#tugas-9-crawling-twiter-x" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">selenium</span><span class="w"> </span><span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">selenium.webdriver.common.by</span><span class="w"> </span><span class="kn">import</span> <span class="n">By</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">selenium.webdriver.common.keys</span><span class="w"> </span><span class="kn">import</span> <span class="n">Keys</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">selenium.webdriver.chrome.service</span><span class="w"> </span><span class="kn">import</span> <span class="n">Service</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">webdriver_manager.chrome</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChromeDriverManager</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">selenium.webdriver.support.ui</span><span class="w"> </span><span class="kn">import</span> <span class="n">WebDriverWait</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">selenium.webdriver.support</span><span class="w"> </span><span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HASHTAG</span> <span class="o">=</span> <span class="s2">&quot;%23tesla&quot;</span>      <span class="c1"># %23 = #</span>
+<span class="n">TARGET_TWEETS</span> <span class="o">=</span> <span class="mi">250</span>
+<span class="n">SCROLL_DELAY</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">MAX_SCROLL</span> <span class="o">=</span> <span class="mi">120</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">options</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">ChromeOptions</span><span class="p">()</span>
+<span class="n">options</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;--user-data-dir=C:\Users\endyzan\AppData\Local\Google\Chrome\User Data&quot;</span><span class="p">)</span>
+<span class="n">options</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--profile-directory=Default&quot;</span><span class="p">)</span>
+<span class="n">options</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--start-maximized&quot;</span><span class="p">)</span>
+
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span>
+    <span class="n">service</span><span class="o">=</span><span class="n">Service</span><span class="p">(</span><span class="n">ChromeDriverManager</span><span class="p">()</span><span class="o">.</span><span class="n">install</span><span class="p">()),</span>
+    <span class="n">options</span><span class="o">=</span><span class="n">options</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://x.com/search?q=</span><span class="si">{</span><span class="n">HASHTAG</span><span class="si">}</span><span class="s2">&amp;f=live&quot;</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="n">wait</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span><span class="n">EC</span><span class="o">.</span><span class="n">presence_of_element_located</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s2">&quot;//article&quot;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tweets_data</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="n">scroll_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">tweets_data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">TARGET_TWEETS</span> <span class="ow">and</span> <span class="n">scroll_count</span> <span class="o">&lt;</span> <span class="n">MAX_SCROLL</span><span class="p">:</span>
+    <span class="n">tweets</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_elements</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s2">&quot;//article//div[@lang]&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">text</span><span class="p">:</span>
+            <span class="n">tweets_data</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Scroll </span><span class="si">{</span><span class="n">scroll_count</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> | Total tweet: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">tweets_data</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">TAG_NAME</span><span class="p">,</span> <span class="s2">&quot;body&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">Keys</span><span class="o">.</span><span class="n">END</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">SCROLL_DELAY</span><span class="p">)</span>
+    <span class="n">scroll_count</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">tweets_data</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;hashtag_250.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Selesai! Total tweet diambil: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 
@@ -456,20 +540,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="tugas4klasifikasi.html"
+       href="tugas9duaproc.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tugas 4 | Klasifikasi -&gt; TFIDF &amp; Word2Vec</p>
+        <p class="prev-next-title">Tugas 9 | Crawling Twiter (X)</p>
       </div>
     </a>
     <a class="right-next"
-       href="tugas5ekslda.html"
+       href="tugas10.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas 5 | Ekstraksi - LDA</p>
+        <p class="prev-next-title">Tugas 10 | Word Graph</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

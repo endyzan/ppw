@@ -1,0 +1,1526 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tugas 10 | Word Graph &#8212; Project PPW</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=2b91c5f0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas10';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Tugas 9 | Crawling Twiter (X)" href="tugas9duacraw.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/foto_logo.jpg" class="logo__image only-light" alt="Project PPW - Home"/>
+    <script>document.write(`<img src="_static/foto_logo.jpg" class="logo__image only-dark" alt="Project PPW - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to Pencarian & Penambangan Web {PPW}
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas1.html">Tugas 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tugas1profile.html">Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas1pengantar.html">Pengantar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas1crawling.html">Crawling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas2.html">Tugas 2</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tugas2crwpta.html">Crawling jurnal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas2crwberita.html">Crawling Berita</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas2linkkelr.html">Link keluaran</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3.html">Tugas 3</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas4.html">Tugas 4</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tugas4ekstraksi.html">Ekstraksi - TFIDF &amp; Word2vec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas4klasifikasi.html">Klasifikasi - TFIDF &amp; Word2vec</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas5.html">Tugas 5</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tugas5ekslda.html">Ekstraksi - LDA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas5klaslda.html">Klasifikasi - LDA</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas6.html">Tugas 6 UTS</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tugas6berita.html">Klasifikasi - Berita</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas6email.html">Clustering - email</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas7.html">Tugas 7 PageRank</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tugas7webgoogle.html">Analisis Dataset web-google</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas7berita.html">Analisis Dataset uts_berita</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas7email.html">Analisis Dataset uts_email</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tugas8.html">Tugas 8 web mining</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tugas9.html">Tugas 9</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tugas9satu.html">Facebook Komunitas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas9duaproc.html">Crawling X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas9duacraw.html">Crawling X</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 10 word graph</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas10.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tugas10.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tugas 10 | Word Graph</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-utama">Code utama</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eda">eda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#co-occurrence-matrix">co-occurrence matrix:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membangun-graf-co-occurrence-pagerank">Membangun graf co-occurrence &amp; pagerank</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-pagerank-untuk-mengidentifikasi-kata-paling-penting">Menghitung PageRank untuk mengidentifikasi kata paling penting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">EDA</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-10-word-graph">
+<h1>Tugas 10 | Word Graph<a class="headerlink" href="#tugas-10-word-graph" title="Permalink to this heading">#</a></h1>
+<p>melakukan analisis teks berbasis graf untuk melihat hubungan antar kata dan menemukan kata-kata yang paling penting melalui co-occurrence graph dan PageRank</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ==========================</span>
+<span class="c1"># 1. Install &amp; Import</span>
+<span class="c1"># ==========================</span>
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pymupdf
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>nltk
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>networkx
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pymupdf</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+
+<span class="c1"># NLTK resources</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt_tab&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pymupdf in c:\users\endyzan\appdata\local\programs\python\python311\lib\site-packages (1.26.7)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 24.1 -&gt; 25.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nltk in c:\users\endyzan\appdata\local\programs\python\python311\lib\site-packages (3.9.2)
+Requirement already satisfied: click in c:\users\endyzan\appdata\local\programs\python\python311\lib\site-packages (from nltk) (8.1.3)
+Requirement already satisfied: joblib in c:\users\endyzan\appdata\local\programs\python\python311\lib\site-packages (from nltk) (1.2.0)
+Requirement already satisfied: regex&gt;=2021.8.3 in c:\users\endyzan\appdata\local\programs\python\python311\lib\site-packages (from nltk) (2023.6.3)
+Requirement already satisfied: tqdm in c:\users\endyzan\appdata\local\programs\python\python311\lib\site-packages (from nltk) (4.65.0)
+Requirement already satisfied: colorama in c:\users\endyzan\appdata\local\programs\python\python311\lib\site-packages (from click-&gt;nltk) (0.4.6)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 24.1 -&gt; 25.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+[notice] A new release of pip is available: 24.1 -&gt; 25.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: networkx in c:\users\endyzan\appdata\local\programs\python\python311\lib\site-packages (3.1)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\endyzan\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     C:\Users\endyzan\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\endyzan\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Buka PDF dan ekstraksi teks → simpan ke output.txt</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ==========================</span>
+<span class="c1"># 2. Extract text from jurnal.pdf</span>
+<span class="c1"># ==========================</span>
+
+<span class="n">doc</span> <span class="o">=</span> <span class="n">pymupdf</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;jurnal.pdf&quot;</span><span class="p">)</span>     <span class="c1"># ganti ke file jurnal.pdf</span>
+<span class="n">out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span>        <span class="c1"># hasil teks</span>
+
+<span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">bytes</span><span class="p">((</span><span class="mi">12</span><span class="p">,)))</span>           <span class="c1"># page delimiter</span>
+
+<span class="n">out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ekstraksi PDF selesai!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ekstraksi PDF selesai!
+</pre></div>
+</div>
+</div>
+</div>
+<section id="code-utama">
+<h2>Code utama<a class="headerlink" href="#code-utama" title="Permalink to this heading">#</a></h2>
+<p>Baca output.txt dan pecah menjadi kalimat</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">teks</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">sentences</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="n">teks</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total kalimat:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sentences</span><span class="p">))</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">sentences</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;kalimat&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;kalimat.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total kalimat: 829
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>PREPROCESSING</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ==========================</span>
+<span class="c1"># 4. Preprocessing Teks (BERSIH &amp; KETAT)</span>
+<span class="c1"># ==========================</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">stopwords</span><span class="p">,</span> <span class="n">wordnet</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.tokenize</span><span class="w"> </span><span class="kn">import</span> <span class="n">word_tokenize</span>
+
+<span class="c1"># Download resource tambahan</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;wordnet&#39;</span><span class="p">)</span>
+
+<span class="c1"># Stopwords</span>
+<span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">))</span>
+
+<span class="c1"># Noise khas PDF / LaTeX / Sitasi</span>
+<span class="n">PDF_NOISE</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;tex&#39;</span><span class="p">,</span> <span class="s1">&#39;latex&#39;</span><span class="p">,</span> <span class="s1">&#39;icecite&#39;</span><span class="p">,</span> <span class="s1">&#39;etal&#39;</span><span class="p">,</span> <span class="s1">&#39;fig&#39;</span><span class="p">,</span> <span class="s1">&#39;figure&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;table&#39;</span><span class="p">,</span> <span class="s1">&#39;http&#39;</span><span class="p">,</span> <span class="s1">&#39;https&#39;</span><span class="p">,</span> <span class="s1">&#39;www&#39;</span><span class="p">,</span> <span class="s1">&#39;author&#39;</span><span class="p">,</span> <span class="s1">&#39;paper&#39;</span>
+<span class="p">}</span>
+
+<span class="c1"># --------------------------</span>
+<span class="c1"># Helper Functions</span>
+<span class="c1"># --------------------------</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">clean_text_basic</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^a-zA-Z\s]&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>   <span class="c1"># hanya huruf</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">has_vowel</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Pastikan kata punya vokal&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[aeiou]&#39;</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">excessive_repetition</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">max_repeat</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Buang nnnnn, xxxxxx, dll&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(.)\1{&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">max_repeat</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;,}&#39;</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">is_english_word</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Cek kamus WordNet&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">wordnet</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">filter_weird_words</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+    <span class="n">filtered</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+
+        <span class="c1"># stopword</span>
+        <span class="k">if</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># panjang kata wajar</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># hanya alfabet</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">w</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># harus ada vokal</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">has_vowel</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># huruf berulang ekstrem</span>
+        <span class="k">if</span> <span class="n">excessive_repetition</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># noise PDF</span>
+        <span class="k">if</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">PDF_NOISE</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># pastikan kata Inggris</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_english_word</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+            <span class="k">continue</span>
+
+        <span class="n">filtered</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">filtered</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">preprocess_clean</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">clean_text_basic</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">filter_weird_words</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">words</span>
+
+<span class="c1"># --------------------------</span>
+<span class="c1"># Jalankan preprocessing</span>
+<span class="c1"># --------------------------</span>
+
+<span class="n">clean_words</span> <span class="o">=</span> <span class="n">preprocess_clean</span><span class="p">(</span><span class="n">teks</span><span class="p">)</span>
+<span class="n">clean_text_joined</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">clean_words</span><span class="p">)</span>
+
+<span class="c1"># Simpan hasil</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;preprocessed_clean.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">clean_text_joined</span><span class="p">)</span>
+
+<span class="c1"># Statistik</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total kata setelah preprocessing:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">clean_words</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total kata unik:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">clean_words</span><span class="p">)))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">20 kata paling sering:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">clean_words</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\endyzan\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\endyzan\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\endyzan\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total kata setelah preprocessing: 7281
+Total kata unik: 1124
+
+20 kata paling sering:
+[(&#39;text&#39;, 251), (&#39;extraction&#39;, 118), (&#39;semantic&#39;, 113), (&#39;words&#39;, 93), (&#39;evaluation&#39;, 85), (&#39;benchmark&#39;, 80), (&#39;word&#39;, 80), (&#39;tools&#39;, 69), (&#39;criteria&#39;, 60), (&#39;characters&#39;, 59), (&#39;document&#39;, 56), (&#39;given&#39;, 53), (&#39;order&#39;, 53), (&#39;format&#39;, 50), (&#39;see&#39;, 50), (&#39;rule&#39;, 50), (&#39;body&#39;, 48), (&#39;information&#39;, 47), (&#39;like&#39;, 47), (&#39;paragraphs&#39;, 43)]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="eda">
+<h3>eda<a class="headerlink" href="#eda" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5.1 Jumlah kata</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah kata:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">clean_words</span><span class="p">))</span>
+
+<span class="c1"># 5.2 Jumlah kata unik</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah kata unik:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">clean_words</span><span class="p">)))</span>
+
+<span class="c1"># 5.3 20 kata paling sering</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">clean_words</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">20 kata paling sering muncul:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">freq</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+
+<span class="c1"># 5.4 Distribusi panjang kalimat</span>
+<span class="n">sentence_lengths</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Rata-rata panjang kalimat:&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">sentence_lengths</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">sentence_lengths</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah kata: 7281
+Jumlah kata unik: 1124
+
+20 kata paling sering muncul:
+[(&#39;text&#39;, 251), (&#39;extraction&#39;, 118), (&#39;semantic&#39;, 113), (&#39;words&#39;, 93), (&#39;evaluation&#39;, 85), (&#39;benchmark&#39;, 80), (&#39;word&#39;, 80), (&#39;tools&#39;, 69), (&#39;criteria&#39;, 60), (&#39;characters&#39;, 59), (&#39;document&#39;, 56), (&#39;given&#39;, 53), (&#39;order&#39;, 53), (&#39;format&#39;, 50), (&#39;see&#39;, 50), (&#39;rule&#39;, 50), (&#39;body&#39;, 48), (&#39;information&#39;, 47), (&#39;like&#39;, 47), (&#39;paragraphs&#39;, 43)]
+
+Rata-rata panjang kalimat: 19.99276236429433
+</pre></div>
+</div>
+</div>
+</div>
+<p>Buat Co-Occurrence Matrix dari teks</p>
+</section>
+<section id="co-occurrence-matrix">
+<h3>co-occurrence matrix:<a class="headerlink" href="#co-occurrence-matrix" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Menggunakan jendela (window size = 2), kode menghitung seberapa sering dua kata muncul berdekatan.</p></li>
+<li><p>Tujuannya: menggambarkan hubungan antar kata dalam dokumen berdasarkan kedekatan munculnya.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">window_size</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span><span class="p">,</span> <span class="n">Counter</span>
+
+<span class="n">co_occ</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="n">Counter</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">clean_words</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="n">window_size</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">clean_words</span><span class="p">),</span> <span class="n">i</span> <span class="o">+</span> <span class="n">window_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">:</span>
+            <span class="n">co_occ</span><span class="p">[</span><span class="n">word</span><span class="p">][</span><span class="n">clean_words</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">unique_words</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">clean_words</span><span class="p">))</span>
+<span class="n">co_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">unique_words</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_words</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">word_index</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span> <span class="n">idx</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">unique_words</span><span class="p">)}</span>
+
+<span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">neighbors</span> <span class="ow">in</span> <span class="n">co_occ</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">neighbor</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">neighbors</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">co_matrix</span><span class="p">[</span><span class="n">word_index</span><span class="p">[</span><span class="n">word</span><span class="p">]][</span><span class="n">word_index</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]]</span> <span class="o">=</span> <span class="n">count</span>
+
+<span class="n">co_matrix_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">co_matrix</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">unique_words</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">unique_words</span><span class="p">)</span>
+<span class="n">co_matrix_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>baseline</th>
+      <th>conference</th>
+      <th>single</th>
+      <th>consisting</th>
+      <th>explicitly</th>
+      <th>algorithms</th>
+      <th>exclusively</th>
+      <th>indexes</th>
+      <th>pitfalls</th>
+      <th>merges</th>
+      <th>...</th>
+      <th>measure</th>
+      <th>several</th>
+      <th>computes</th>
+      <th>marker</th>
+      <th>directly</th>
+      <th>layout</th>
+      <th>overview</th>
+      <th>found</th>
+      <th>tags</th>
+      <th>segmentation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>baseline</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>conference</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>single</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>consisting</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>explicitly</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>layout</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>overview</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>found</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>tags</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>segmentation</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1124 rows × 1124 columns</p>
+</div></div></div>
+</div>
+<p>Buat Graf Co-Occurrence</p>
+</section>
+<section id="membangun-graf-co-occurrence-pagerank">
+<h3>Membangun graf co-occurrence &amp; pagerank<a class="headerlink" href="#membangun-graf-co-occurrence-pagerank" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Matrix tersebut dikonversi menjadi sebuah graf (network) menggunakan networkx.</p></li>
+<li><p>Tujuannya: memvisualisasikan teks sebagai jaringan kata, sehingga struktur hubungan antar konsep dapat terlihat.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_numpy_array</span><span class="p">(</span><span class="n">co_matrix_df</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Graf Co-Occurrence&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">pagerank_scores</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+<span class="n">pagerank_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;word&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">co_matrix_df</span><span class="o">.</span><span class="n">index</span><span class="p">),</span>
+    <span class="s2">&quot;pagerank&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">pagerank_scores</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="p">})</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;pagerank&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">20 Kata Teratas berdasarkan PageRank:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pagerank_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/4743fe2c0445055fcef76dc4c45bc80808ce09c61ebd27d52325348804d918c6.png" src="_images/4743fe2c0445055fcef76dc4c45bc80808ce09c61ebd27d52325348804d918c6.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20 Kata Teratas berdasarkan PageRank:
+            word  pagerank
+415         text  0.025373
+187   extraction  0.012837
+824     semantic  0.010744
+1017       words  0.010138
+490   evaluation  0.009355
+890         word  0.008259
+543    benchmark  0.008167
+165        tools  0.007838
+203     criteria  0.007756
+458        order  0.007288
+708        given  0.006955
+763         rule  0.006081
+999   characters  0.005861
+832          see  0.005855
+684     articles  0.005752
+875         like  0.005716
+747     document  0.005427
+319          les  0.005329
+1112     command  0.005181
+405      section  0.005093
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menghitung-pagerank-untuk-mengidentifikasi-kata-paling-penting">
+<h3>Menghitung PageRank untuk mengidentifikasi kata paling penting<a class="headerlink" href="#menghitung-pagerank-untuk-mengidentifikasi-kata-paling-penting" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>menemukan kata yang paling sentral</p></li>
+<li><p>menentukan topik dominan dalam paper</p></li>
+<li><p>menganalisis kata yang paling mempengaruhi jaringan</p></li>
+</ul>
+<p>PageRank berfungsi untuk menentukan kata mana yang paling penting / paling berpengaruh dalam dokumen berdasarkan koneksi antar kata.</p>
+<p>Seberapa banyak sebuah kata dikunjungi oleh kata lain
+Semakin sering suatu kata muncul berdekatan dengan banyak kata lain → semakin tinggi nilai PageRank-nya.</p>
+<p>Seberapa penting kata-kata yang terhubung dengannya
+Jika kata A muncul bersama kata B, dan kata B adalah kata penting, maka A ikut menjadi penting.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">networkx.algorithms.community</span><span class="w"> </span><span class="kn">import</span> <span class="n">louvain_communities</span>
+
+<span class="n">communities</span> <span class="o">=</span> <span class="n">louvain_communities</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Total komunitas:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">communities</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">communities</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Komunitas </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="si">}</span><span class="s2"> kata&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total komunitas: 13
+Komunitas 1: 18 kata
+Komunitas 2: 17 kata
+Komunitas 3: 164 kata
+Komunitas 4: 84 kata
+Komunitas 5: 72 kata
+Komunitas 6: 56 kata
+Komunitas 7: 87 kata
+Komunitas 8: 24 kata
+Komunitas 9: 131 kata
+Komunitas 10: 101 kata
+Komunitas 11: 69 kata
+Komunitas 12: 170 kata
+Komunitas 13: 131 kata
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Komunitas</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">co_matrix_df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">pagerank_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">pagerank_df</span><span class="p">[</span><span class="s1">&#39;word&#39;</span><span class="p">],</span> <span class="n">pagerank_df</span><span class="p">[</span><span class="s1">&#39;pagerank&#39;</span><span class="p">]))</span>
+
+<span class="n">hasil_komunitas</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">comm</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">communities</span><span class="p">):</span>
+    <span class="n">comm_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word_list</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">comm</span><span class="p">]</span>
+    <span class="n">pr_values</span> <span class="o">=</span> <span class="p">{</span><span class="n">w</span><span class="p">:</span> <span class="n">pagerank_dict</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">comm_words</span><span class="p">}</span>
+    <span class="n">top_word</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">pr_values</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">pr_values</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+
+    <span class="n">hasil_komunitas</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s2">&quot;komunitas&quot;</span><span class="p">:</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;jumlah_kata&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">comm_words</span><span class="p">),</span>
+        <span class="s2">&quot;kata_paling_dominan&quot;</span><span class="p">:</span> <span class="n">top_word</span><span class="p">,</span>
+        <span class="s2">&quot;pagerank&quot;</span><span class="p">:</span> <span class="n">pr_values</span><span class="p">[</span><span class="n">top_word</span><span class="p">]</span>
+    <span class="p">})</span>
+
+<span class="n">df_dominan</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">hasil_komunitas</span><span class="p">)</span>
+<span class="n">df_dominan</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>komunitas</th>
+      <th>jumlah_kata</th>
+      <th>kata_paling_dominan</th>
+      <th>pagerank</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>18</td>
+      <td>make</td>
+      <td>0.003023</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>17</td>
+      <td>digital</td>
+      <td>0.001988</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>164</td>
+      <td>articles</td>
+      <td>0.005752</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>84</td>
+      <td>text</td>
+      <td>0.025373</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>72</td>
+      <td>page</td>
+      <td>0.003640</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>56</td>
+      <td>learning</td>
+      <td>0.001286</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>87</td>
+      <td>tree</td>
+      <td>0.003942</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>24</td>
+      <td>line</td>
+      <td>0.004053</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>131</td>
+      <td>words</td>
+      <td>0.010138</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>101</td>
+      <td>criteria</td>
+      <td>0.007756</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>11</td>
+      <td>69</td>
+      <td>semantic</td>
+      <td>0.010744</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>12</td>
+      <td>170</td>
+      <td>rule</td>
+      <td>0.006081</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>13</td>
+      <td>131</td>
+      <td>word</td>
+      <td>0.008259</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="id1">
+<h3>EDA<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah kalimat:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sentences</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah kalimat: 829
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">nltk.tokenize</span><span class="w"> </span><span class="kn">import</span> <span class="n">word_tokenize</span>
+
+<span class="n">words_all</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">teks</span><span class="p">)</span>      <span class="c1"># teks = hasil preprocessing</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah kata:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">words_all</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah kata: 20315
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">unique_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">words_all</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah kata unik:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_words</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah kata unik: 2148
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
+
+<span class="n">word_freq</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">words_all</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;20 kata paling sering muncul:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word_freq</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20 kata paling sering muncul:
+[(&#39;,&#39;, 1004), (&#39;the&#39;, 893), (&#39;.&#39;, 825), (&#39;of&#39;, 610), (&#39;and&#39;, 418), (&#39;(&#39;, 417), (&#39;)&#39;, 409), (&#39;a&#39;, 383), (&#39;is&#39;, 298), (&#39;in&#39;, 282), (&#39;to&#39;, 278), (&#39;PDF&#39;, 229), (&#39;for&#39;, 209), (&#39;:&#39;, 209), (&#39;text&#39;, 195), (&#39;from&#39;, 168), (&#39;or&#39;, 166), (&#39;are&#39;, 142), (&#39;[&#39;, 133), (&#39;]&#39;, 133)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence_lengths</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rata-rata panjang kalimat:&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">sentence_lengths</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">sentence_lengths</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kalimat terpendek:&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">sentence_lengths</span><span class="p">),</span> <span class="s2">&quot;kata&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kalimat terpanjang:&quot;</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">sentence_lengths</span><span class="p">),</span> <span class="s2">&quot;kata&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rata-rata panjang kalimat: 19.99276236429433
+Kalimat terpendek: 1 kata
+Kalimat terpanjang: 390 kata
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word_lengths</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words_all</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rata-rata panjang kata:&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">word_lengths</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">word_lengths</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kata terpendek:&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">word_lengths</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kata terpanjang:&quot;</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">word_lengths</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rata-rata panjang kata: 4.099729264090573
+Kata terpendek: 1
+Kata terpanjang: 38
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tugas9duacraw.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tugas 9 | Crawling Twiter (X)</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-utama">Code utama</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eda">eda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#co-occurrence-matrix">co-occurrence matrix:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membangun-graf-co-occurrence-pagerank">Membangun graf co-occurrence &amp; pagerank</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-pagerank-untuk-mengidentifikasi-kata-paling-penting">Menghitung PageRank untuk mengidentifikasi kata paling penting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">EDA</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By 220411100176 - Ahmad Andi Zainuri
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
